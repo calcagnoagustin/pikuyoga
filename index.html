@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Posgrado en Yoga</title>
+<meta name="description" content="Formación online de 3 meses para profes de yoga: pedagogía, pranayamas y yoga nidra. Con Piku Montiel.">
+<meta property="og:title" content="Posgrado en Yoga">
+<meta property="og:description" content="Formación online de 3 meses para profes de yoga: pedagogía, pranayamas y yoga nidra. Con Piku Montiel.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<link rel="icon" href="assets/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;500;700&family=Montserrat:wght@600;700&display=swap">
+</head>
+<body>
+<style>
+/* ============================================================
+   PIKU YOGA — sistema visual
+   Paleta y tipografías derivadas de la marca (logo + placas IG)
+   ============================================================ */
+
+:root{
+  /* color */
+  --papel:#FFFFFF;
+  --arena:#FBF3EC;          /* off-white cálido, sesgado al adobe de la shala */
+  --linea:#E9DCD1;
+  --tinta:#1E1A18;          /* casi negro, cálido */
+  --tinta-2:#4E443E;        /* texto secundario */
+  --coral:#EB4053;          /* placas de Instagram */
+  --coral-deep:#B32234;
+  --amarillo:#F3EC23;       /* disco del logo */
+  --barro:#563020;          /* muro de adobe */
+  --barro-2:#8A4E2E;
+
+  /* tipografía */
+  --display:'Fraunces','Playfair Display',Georgia,'Times New Roman',serif;
+  --texto:'Karla','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --label:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
+
+  --fs-hero:clamp(2.9rem,8.4vw,5.9rem);
+  --fs-h1:clamp(2.1rem,5.2vw,3.5rem);
+  --fs-h2:clamp(1.65rem,3.4vw,2.4rem);
+  --fs-h3:clamp(1.15rem,1.6vw,1.35rem);
+  --fs-body:clamp(1rem,.35vw+.95rem,1.075rem);
+  --fs-small:.875rem;
+  --fs-label:.72rem;
+
+  /* espacio */
+  --gut:clamp(1.25rem,4vw,3rem);
+  --sec:clamp(3.75rem,9vw,7.5rem);
+  --wrap:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:var(--texto);
+  font-size:var(--fs-body);
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%;height:auto;display:block}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-variation-settings:'SOFT' 60,'WONK' 1;
+  font-weight:600;
+  line-height:1.03;
+  letter-spacing:-.015em;
+  text-wrap:balance;
+  margin:0;
+}
+h1{font-size:var(--fs-h1)}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3);line-height:1.25;letter-spacing:0}
+p{margin:0}
+
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:2px}
+
+/* ---------- estructura ---------- */
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.wrap-narrow{max-width:760px;margin-inline:auto;padding-inline:var(--gut)}
+.col{max-width:63ch}
+.sec{padding-block:var(--sec)}
+.stack{display:flex;flex-direction:column;gap:1.15rem}
+.stack-lg{display:flex;flex-direction:column;gap:2.25rem}
+
+.band-arena{background:var(--arena)}
+.band-coral{background:var(--coral);color:#fff}
+.band-barro{background:var(--barro);color:#F6EDE6}
+.band-coral h1,.band-coral h2,.band-coral h3,.band-barro h1,.band-barro h2,.band-barro h3{color:inherit}
+
+/* ---------- micro-tipografía ---------- */
+.eyebrow{
+  font-family:var(--label);font-weight:600;font-size:var(--fs-label);
+  letter-spacing:.19em;text-transform:uppercase;color:var(--coral);
+  margin:0;
+}
+.band-coral .eyebrow{color:#FFE3E7}
+.band-barro .eyebrow{color:var(--amarillo)}
+.lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.62;color:var(--tinta-2)}
+.band-coral .lead,.band-barro .lead{color:inherit;opacity:.92}
+.muted{color:var(--tinta-2)}
+.dato{font-family:var(--label);font-weight:600;font-size:var(--fs-small);letter-spacing:.06em}
+
+/* ---------- botones ---------- */
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--label);font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:1.05em 1.7em;border:2px solid transparent;border-radius:999px;
+  text-decoration:none;cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral-deep)}
+.btn-tinta{background:var(--tinta);color:#fff}
+.btn-tinta:hover{background:#000}
+.btn-line{border-color:currentColor}
+.btn-line:hover{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.band-coral .btn-line:hover{background:#fff;color:var(--coral);border-color:#fff}
+.band-barro .btn-line:hover{background:var(--amarillo);color:var(--tinta);border-color:var(--amarillo)}
+.btn-amarillo{background:var(--amarillo);color:var(--tinta)}
+.btn-amarillo:hover{background:#E3DC10}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* ---------- sello (el disco amarillo del logo, reutilizado) ---------- */
+.sello{
+  position:absolute;top:-1.4rem;right:-1rem;
+  display:grid;place-content:center;text-align:center;
+  width:8.6rem;height:8.6rem;border-radius:50%;
+  background:var(--amarillo);color:var(--tinta);
+  font-family:var(--label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  font-size:.7rem;line-height:1.5;
+  transform:rotate(-9deg);
+}
+/* el sello está rotado: su caja visual es ~8px más ancha que el círculo,
+   así que en mobile se apoya hacia adentro para no desbordar la ventana */
+@media (max-width:520px){.sello{width:7rem;height:7rem;top:-1.1rem;right:.5rem;font-size:.62rem}}
+.sello b{display:block;font-family:var(--display);font-size:1.5rem;letter-spacing:-.01em;
+  text-transform:none;font-variation-settings:'SOFT' 60,'WONK' 1}
+.num{
+  display:grid;place-content:center;flex:none;
+  width:3rem;height:3rem;border-radius:50%;
+  background:var(--amarillo);color:var(--tinta);
+  font-family:var(--display);font-size:1.35rem;font-weight:600;
+  font-variation-settings:'SOFT' 60,'WONK' 1;
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--linea);
+}
+.nav-in{max-width:var(--wrap);margin-inline:auto;padding:.7rem var(--gut);
+  display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.nav-logo img{width:44px;height:44px}
+.nav-logo span{font-family:var(--label);font-weight:700;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.nav-links{display:none;gap:1.6rem;align-items:center}
+.nav-links a{font-family:var(--label);font-weight:600;font-size:.72rem;letter-spacing:.12em;
+  text-transform:uppercase;text-decoration:none;color:var(--tinta-2)}
+.nav-links a:hover{color:var(--coral)}
+.nav .btn{padding:.8em 1.3em;font-size:.72rem}
+@media (min-width:900px){.nav-links{display:flex}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--tinta);color:#fff;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;opacity:.55}
+.hero-in{position:relative;max-width:var(--wrap);margin-inline:auto;padding:clamp(4.5rem,13vw,9rem) var(--gut) clamp(3.5rem,8vw,6rem)}
+.hero h1{font-size:var(--fs-hero);letter-spacing:-.025em}
+.hero .lead{color:#F3E9E2;max-width:34ch}
+.hero::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,14,11,.55) 0%,rgba(20,14,11,.15) 45%,rgba(20,14,11,.82) 100%)}
+.hero-in{z-index:2}
+
+/* ---------- meta / fichas ---------- */
+.meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{
+  font-family:var(--label);font-weight:600;font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;
+  padding:.55em 1em;border-radius:999px;border:1px solid currentColor;opacity:.95;
+}
+.chip-solid{background:var(--amarillo);color:var(--tinta);border-color:var(--amarillo)}
+
+/* ---------- módulos ---------- */
+.modulo{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center;padding-block:clamp(2.5rem,5vw,4rem)}
+.modulo + .modulo{border-top:1px solid var(--linea)}
+.modulo-head{display:flex;gap:1rem;align-items:flex-start}
+.modulo-head .num{margin-top:.1em}
+.modulo h3{font-size:var(--fs-h2);line-height:1.05;letter-spacing:-.015em}
+.modulo figure{margin:0;position:relative;display:flex}
+.modulo figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+@media (min-width:860px){
+  .modulo{grid-template-columns:1fr 1fr;align-items:stretch}
+  .modulo .m-txt{align-self:center}
+  .modulo.flip figure{order:2}
+  .modulo figure{position:relative;min-height:clamp(380px,34vw,540px)}
+  .modulo figure img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+}
+
+/* ---------- listas ---------- */
+.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem}
+.lista li{position:relative;padding-left:1.6rem}
+.lista li::before{content:'';position:absolute;left:0;top:.72em;width:.5rem;height:.5rem;
+  border-radius:50%;background:var(--coral)}
+.band-barro .lista li::before,.band-coral .lista li::before{background:var(--amarillo)}
+.lista-guion li::before{width:.85rem;height:2px;border-radius:0;top:.85em}
+
+/* ---------- tarjetas de precio ---------- */
+.precios{display:grid;gap:1.25rem}
+@media (min-width:820px){.precios{grid-template-columns:1.15fr 1fr}}
+.precio{
+  border:1px solid var(--linea);background:var(--papel);
+  padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1rem;position:relative;
+}
+.precio-destacado{border:2px solid var(--tinta)}
+.plata{font-family:var(--display);font-size:clamp(2rem,4.2vw,2.9rem);font-weight:600;
+  font-variation-settings:'SOFT' 60,'WONK' 1;line-height:1;letter-spacing:-.02em;margin:0}
+.card .plata{font-size:clamp(1.8rem,3vw,2.3rem)}
+.plata small{font-family:var(--label);font-size:.72rem;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;display:block;margin-top:.6rem;color:var(--tinta-2)}
+.sueltos{display:grid;gap:.75rem}
+.suelto{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+  padding-block:.85rem;border-bottom:1px solid var(--linea)}
+.suelto:last-child{border-bottom:0}
+.suelto a{text-decoration:none;font-weight:500}
+.suelto a:hover{color:var(--coral)}
+.suelto .plata-min{font-family:var(--display);font-size:1.3rem;font-weight:600;white-space:nowrap;
+  font-variation-settings:'SOFT' 60,'WONK' 1}
+
+/* ---------- grid de tarjetas ---------- */
+.cards{display:grid;gap:1.25rem}
+@media (min-width:760px){.cards-3{grid-template-columns:repeat(3,1fr)}.cards-2{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--papel);border:1px solid var(--linea);padding:clamp(1.5rem,3vw,2.1rem);
+  display:flex;flex-direction:column;gap:.9rem}
+.band-barro .card{background:rgba(255,255,255,.06);border-color:rgba(246,237,230,.22)}
+
+/* ---------- bio ---------- */
+.bio{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center}
+.bio img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+@media (min-width:860px){.bio{grid-template-columns:.85fr 1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{border-top:1px solid var(--linea)}
+.faq details{border-bottom:1px solid var(--linea)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.25rem 2.5rem 1.25rem 0;position:relative;
+  font-family:var(--display);font-size:1.1rem;font-weight:600;line-height:1.35;
+  font-variation-settings:'SOFT' 60,'WONK' 1;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:.25rem;top:1.05rem;
+  font-family:var(--texto);font-size:1.5rem;color:var(--coral);transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding-bottom:1.4rem;color:var(--tinta-2);max-width:60ch}
+
+/* ---------- cita ---------- */
+.cita{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.22;
+  font-variation-settings:'SOFT' 60,'WONK' 1;font-weight:500;letter-spacing:-.015em;text-wrap:balance}
+
+/* ---------- galería ---------- */
+.tira{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}
+@media (min-width:760px){.tira{grid-template-columns:repeat(4,1fr)}}
+.tira img{width:100%;aspect-ratio:4/5;object-fit:cover}
+
+/* ---------- footer ---------- */
+.foot{background:var(--tinta);color:#EFE6E0;padding-block:clamp(3rem,6vw,4.5rem)}
+.foot-in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);
+  display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
+.foot a{color:#EFE6E0}
+.foot .nav-links{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
+.foot .nav-links a{color:#C8BAB2}
+.foot .nav-links a:hover{color:var(--amarillo)}
+.foot-legal{border-top:1px solid rgba(239,230,224,.16);margin-top:2.5rem;padding-top:1.5rem;
+  font-size:.78rem;color:#9C8D86}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+</style>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html">
+      <img src="assets/logo.webp" alt="Piku Yoga" width="44" height="44">
+      <span>Piku Yoga</span>
+    </a>
+    <div class="nav-links">
+      <a href="#formacion">La formación</a>
+      <a href="#modulos">Los 3 módulos</a>
+      <a href="#incluye">Qué incluye</a>
+      <a href="#valores">Valores</a>
+      <a href="#piku">Quién soy</a>
+    </div>
+    <a class="btn btn-coral" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20Posgrado%20en%20Yoga">Quiero sumarme</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <img class="hero-img" src="assets/hero-caminando.webp" alt="Piku dando clase en una shala de adobe" width="1800" height="1200">
+  <div class="hero-in stack">
+    <p class="eyebrow" style="color:var(--amarillo)">Piku Yoga · Formación online</p>
+    <h1>Posgrado<br>en Yoga</h1>
+    <p class="lead">Tres meses para seguir estudiando, practicando y creciendo en tu camino dentro del Yoga. Para profes que quieren profundizar, sumar herramientas y enriquecer sus clases.</p>
+    <div class="meta" style="margin-top:.5rem">
+      <span class="chip chip-solid">Arranca el 15 de septiembre</span>
+      <span class="chip">3 meses</span>
+      <span class="chip">12 clases en vivo</span>
+      <span class="chip">Martes 19 a 21 h</span>
+      <span class="chip">Certificado final</span>
+    </div>
+    <div class="btns" style="margin-top:1rem">
+      <a class="btn btn-amarillo" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20Posgrado%20en%20Yoga">Quiero sumarme</a>
+      <a class="btn btn-line" href="#modulos" style="color:#fff">Ver los 3 módulos</a>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="formacion">
+  <div class="wrap-narrow stack-lg rv">
+    <div class="stack">
+      <p class="eyebrow">De qué se trata</p>
+      <h2>Una formación para seguir estudiando después de la formación.</h2>
+    </div>
+    <div class="stack col">
+      <p>El Posgrado en Yoga de Piku Yoga es una propuesta <strong>online de 3 meses</strong>, pensada especialmente para profesoras y profesores de Yoga que quieran profundizar sus conocimientos, sumar nuevas herramientas y enriquecer sus clases.</p>
+      <p>También pueden participar personas que, aunque todavía no estén dando clases, quieran profundizar seriamente en su práctica y conocimiento del Yoga.</p>
+      <p>El recorrido está organizado en <strong>3 módulos de 4 clases cada uno</strong>, que podés cursar completos o por separado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-arena">
+  <div class="wrap stack-lg rv">
+    <div class="stack" style="max-width:46ch">
+      <p class="eyebrow">Para quién es</p>
+      <h2>Para quien ya recorrió un camino y siente que todavía hay muchísimo por estudiar.</h2>
+    </div>
+    <div class="cards cards-3">
+      <div class="card">
+        <h3>Profes de Yoga</h3>
+        <p class="muted">Que quieren salir del piloto automático, ordenar sus clases y sumar herramientas nuevas para acompañar mejor a sus alumnos.</p>
+      </div>
+      <div class="card">
+        <h3>Estudiantes en formación</h3>
+        <p class="muted">Que están transitando un profesorado y quieren llegar a dar clases con más base, más recursos y más confianza.</p>
+      </div>
+      <div class="card">
+        <h3>Personas que quieran profundizar</h3>
+        <p class="muted">Que todavía no dan clases, pero quieren estudiar el Yoga en serio y llevarlo a su propia práctica y a su vida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="modulos">
+  <div class="wrap">
+    <div class="stack rv" style="max-width:44ch;margin-bottom:clamp(2rem,4vw,3.5rem)">
+      <p class="eyebrow">El recorrido · 3 módulos de 4 clases</p>
+      <h2>Cada módulo es un curso completo en sí mismo.</h2>
+      <p class="muted">Podés hacer el Posgrado entero o cursar sólo el módulo que necesitás.</p>
+    </div>
+
+    <article class="modulo rv" id="pedagogia">
+      <figure><img src="assets/circulo-hablando.webp" alt="Piku en ronda con un grupo de alumnas" width="1000" height="1500" loading="lazy"></figure>
+      <div class="stack m-txt">
+        <div class="modulo-head">
+          <span class="num">1</span>
+          <h3>Pedagogía para el armado y la planificación de clases</h3>
+        </div>
+        <p>Un espacio para aprender a diseñar y planificar clases con claridad, creatividad, confianza y estructura, desarrollando al mismo tiempo una voz propia como profe.</p>
+        <ul class="lista lista-guion">
+          <li>La construcción de una clase y sus diferentes momentos.</li>
+          <li>Elección y secuenciación de asanas.</li>
+          <li>Definición de objetivos: qué quiero transmitir y para qué.</li>
+          <li>El uso de la palabra y la comunicación de consignas.</li>
+          <li>Observación de los alumnos y recursos para acompañar grupos.</li>
+        </ul>
+        <p class="muted">La intención es salir del piloto automático y empezar a construir una experiencia coherente alrededor de una intención.</p>
+        <div class="suelto" style="border-top:1px solid var(--linea);border-bottom:0;margin-top:.5rem">
+          <a href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20curso%20de%20Pedagog%C3%ADa">Cursar sólo este módulo →</a>
+          <span class="plata-min">$60.000</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="modulo flip rv" id="pranayamas">
+      <figure><img src="assets/mudra-manos.webp" alt="Piku explicando con las manos en mudra" width="1000" height="1500" loading="lazy"></figure>
+      <div class="stack m-txt">
+        <div class="modulo-head">
+          <span class="num">2</span>
+          <h3>Respiración consciente y Pranayamas</h3>
+        </div>
+        <p>Un recorrido teórico-práctico para profundizar en la respiración como una de las grandes herramientas del Yoga: sus características, sus efectos y las distintas maneras de llevarla a la práctica personal y a las clases.</p>
+        <ul class="lista">
+          <li><strong>Neutros</strong> — respiración completa, Sama Vritti, Viloma y Nadi Shodhana.</li>
+          <li><strong>Solares</strong> — Ujjayi, Surya Bhedana y Kapalabhati.</li>
+          <li><strong>Lunares</strong> — Chandra Bhedana, Shitali y Sitkari.</li>
+        </ul>
+        <p class="muted">El objetivo no es solamente aprender las técnicas, sino comprender cuándo, cómo y para qué utilizarlas.</p>
+        <div class="suelto" style="border-top:1px solid var(--linea);border-bottom:0;margin-top:.5rem">
+          <a href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20curso%20de%20Respiraci%C3%B3n%20Consciente%20y%20Pranayamas">Cursar sólo este módulo →</a>
+          <span class="plata-min">$60.000</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="modulo rv" id="yoganidra">
+      <figure><img src="assets/nidra.webp" alt="Práctica de relajación profunda guiada" width="1000" height="1500" loading="lazy"></figure>
+      <div class="stack m-txt">
+        <div class="modulo-head">
+          <span class="num">3</span>
+          <h3>Yoga Nidra y visualizaciones creativas</h3>
+        </div>
+        <p>Un módulo dedicado al universo de la relajación profunda, la meditación y la visualización. Estudiamos el Yoga Nidra desde su estructura tradicional y aprendemos a construir y guiar nuestras propias prácticas.</p>
+        <ul class="lista lista-guion">
+          <li>Toma de conciencia, Sankalpa y relajación.</li>
+          <li>Rotación de la conciencia y respiración.</li>
+          <li>Imágenes, visualización, resolución y despertar.</li>
+          <li>Recursos de visualización creativa y meditación guiada.</li>
+        </ul>
+        <p class="muted">Herramientas para llevar a tus clases, a tu práctica personal, a sesiones individuales o a otras propuestas terapéuticas y holísticas.</p>
+        <div class="suelto" style="border-top:1px solid var(--linea);border-bottom:0;margin-top:.5rem">
+          <a href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20curso%20de%20Yoga%20Nidra%20y%20Visualizaciones">Cursar sólo este módulo →</a>
+          <span class="plata-min">$60.000</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec band-barro" id="incluye">
+  <div class="wrap rv" style="display:grid;gap:clamp(2rem,5vw,4rem);align-items:start">
+    <div class="stack" style="max-width:40ch">
+      <p class="eyebrow">Qué incluye</p>
+      <h2>Todo lo que te llevás del Posgrado.</h2>
+    </div>
+    <div class="cards cards-2" style="gap:clamp(1rem,3vw,2.5rem)">
+      <ul class="lista">
+        <li>12 clases teóricas online en vivo a lo largo de los 3 meses.</li>
+        <li>Clases los martes de 19 a 21 h por Zoom.</li>
+        <li>Todas las clases quedan grabadas y se envían los miércoles por YouTube.</li>
+        <li>Prácticas de Hatha Yoga online los lunes y jueves de 19 a 20 h.</li>
+        <li>Biblioteca de clases prácticas grabadas para practicar a tu ritmo.</li>
+      </ul>
+      <ul class="lista">
+        <li>Material teórico, cuadernillos y recursos complementarios.</li>
+        <li>Prácticas y ejercicios para integrar los contenidos.</li>
+        <li>Grupo de WhatsApp para acompañamiento, consultas e intercambio.</li>
+        <li>Acceso de por vida a las clases y materiales.</li>
+        <li>Certificado final de participación.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="valores">
+  <div class="wrap stack-lg rv">
+    <div class="stack" style="max-width:40ch">
+      <p class="eyebrow">Valores</p>
+      <h2>Todo junto, o de a un módulo por vez.</h2>
+    </div>
+    <div class="precios">
+      <div class="precio precio-destacado">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem">
+          <div class="stack" style="gap:.4rem">
+            <p class="eyebrow">Posgrado completo</p>
+            <h3 style="font-size:1.6rem">Los 3 módulos</h3>
+          </div>
+          <div class="sello"><span>Arranca</span><b>15 sep</b><span>Martes 19 h</span></div>
+        </div>
+        <p class="plata">$160.000<small>Un único pago adelantado</small></p>
+        <ul class="lista" style="font-size:var(--fs-small)">
+          <li>12 clases en vivo + prácticas semanales de Hatha Yoga.</li>
+          <li>Cuadernillos y materiales de los tres módulos.</li>
+          <li>Acceso de por vida y certificado final.</li>
+        </ul>
+        <a class="btn btn-coral" style="align-self:flex-start;margin-top:auto" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20inscribirme%20al%20Posgrado%20completo">Quiero el Posgrado completo</a>
+      </div>
+      <div class="precio">
+        <div class="stack" style="gap:.4rem">
+          <p class="eyebrow">Módulos sueltos</p>
+          <h3 style="font-size:1.6rem">4 clases · $60.000 cada uno</h3>
+        </div>
+        <div class="sueltos">
+          <div class="suelto"><a href="#pedagogia">Pedagogía y planificación de clases</a><span class="plata-min">$60.000</span></div>
+          <div class="suelto"><a href="#pranayamas">Respiración consciente y Pranayamas</a><span class="plata-min">$60.000</span></div>
+          <div class="suelto"><a href="#yoganidra">Yoga Nidra y visualizaciones creativas</a><span class="plata-min">$60.000</span></div>
+        </div>
+        <p class="muted" style="font-size:var(--fs-small)">Cada módulo incluye las 4 clases en vivo, las grabaciones, el material teórico, el cuadernillo, acceso de por vida y acompañamiento por WhatsApp.</p>
+        <a class="btn btn-line" style="align-self:flex-start;margin-top:auto" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20un%20m%C3%B3dulo%20suelto">Consultar por un módulo</a>
+      </div>
+    </div>
+    <p class="dato muted">La próxima edición arranca el martes 15 de septiembre. Cupos limitados: escribime y reservás tu lugar.</p>
+  </div>
+</section>
+
+<section class="sec band-arena" id="piku">
+  <div class="wrap bio rv">
+    <img src="assets/retrato-medita.webp" alt="Piku Montiel sentada en meditación" width="1000" height="1500" loading="lazy">
+    <div class="stack">
+      <p class="eyebrow">Quién soy</p>
+      <h2>Piku Montiel</h2>
+      <p class="lead">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
+      <p>Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
+      <p>Mi intención es generar espacios de práctica, formación y acompañamiento donde podamos estudiar con profundidad, experimentar en el propio cuerpo y encontrar una manera genuina de llevar el Yoga a nuestra vida y compartirlo con otras personas.</p>
+      <div class="meta" style="margin-top:.5rem">
+        <span class="chip" style="color:var(--tinta-2)">Hatha Yoga</span>
+        <span class="chip" style="color:var(--tinta-2)">Respiración consciente</span>
+        <span class="chip" style="color:var(--tinta-2)">Mentorías docentes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap-narrow rv">
+    <p class="eyebrow" style="margin-bottom:1.5rem">Preguntas frecuentes</p>
+    <div class="faq">
+      <details>
+        <summary>¿Necesito ser profe de Yoga para hacerlo?</summary>
+        <div class="faq-body">No. El Posgrado está pensado especialmente para profes en actividad, pero también pueden participar personas que todavía no estén dando clases y quieran profundizar seriamente en su práctica y conocimiento del Yoga.</div>
+      </details>
+      <details>
+        <summary>¿Y si no puedo estar en el horario en vivo?</summary>
+        <div class="faq-body">Todas las clases quedan grabadas y se envían los miércoles a través de YouTube. Podés verlas cuando quieras y tenés acceso de por vida al material.</div>
+      </details>
+      <details>
+        <summary>¿Puedo hacer un solo módulo?</summary>
+        <div class="faq-body">Sí. Cada módulo es un curso de 4 clases que funciona de manera independiente y tiene un valor de $60.000. Si después querés seguir con los otros, podés hacerlo.</div>
+      </details>
+      <details>
+        <summary>¿Las prácticas de Hatha Yoga están incluidas?</summary>
+        <div class="faq-body">Sí. Durante los tres meses tenés las prácticas online en vivo de los lunes y jueves de 19 a 20 h, más el acceso a la biblioteca de clases grabadas en mi canal de YouTube.</div>
+      </details>
+      <details>
+        <summary>¿Hay certificado?</summary>
+        <div class="faq-body">Sí, al terminar el recorrido completo recibís un certificado final de participación.</div>
+      </details>
+      <details>
+        <summary>¿Desde dónde puedo cursar?</summary>
+        <div class="faq-body">Desde cualquier lugar: todo el Posgrado es online por Zoom. Los horarios que figuran son de Argentina.</div>
+      </details>
+      <details>
+        <summary>¿Cómo se abona?</summary>
+        <div class="faq-body">Escribime por WhatsApp y te paso los medios de pago disponibles. La próxima edición arranca el martes 15 de septiembre.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec band-coral">
+  <div class="wrap-narrow stack rv" style="align-items:flex-start">
+    <p class="eyebrow">Próxima edición · arranca el 15 de septiembre</p>
+    <p class="cita">Una invitación a seguir recorriendo el Yoga como un camino de conocimiento y transformación.</p>
+    <div class="btns" style="margin-top:1rem">
+      <a class="btn btn-amarillo" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20Posgrado%20en%20Yoga">Escribime por WhatsApp</a>
+      <a class="btn btn-line" href="https://www.instagram.com/piku.yoga/">Ver el Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="stack" style="gap:.9rem;max-width:30ch">
+      <a class="nav-logo" href="index.html"><img src="assets/logo.webp" alt="Piku Yoga" width="52" height="52"></a>
+      <p style="font-size:var(--fs-small);color:#C8BAB2">Práctica · Formación · Profundización · Creatividad · Comunidad</p>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Posgrado en Yoga</a>
+      <a href="grupo-de-estudio.html">Grupo de estudio</a>
+      <a href="clases-de-hatha-yoga.html">Clases de Hatha Yoga</a>
+      <a href="mentorias.html">Mentorías creativas</a>
+      <a href="retiros.html">Retiros y experiencias</a>
+    </div>
+    <div class="nav-links">
+      <a href="https://wa.me/5491154641985">WhatsApp +54 9 11 5464-1985</a>
+      <a href="https://www.instagram.com/piku.yoga/">Instagram @piku.yoga</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">© Piku Yoga · Piku Montiel</div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
