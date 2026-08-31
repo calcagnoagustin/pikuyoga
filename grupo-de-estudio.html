@@ -289,6 +289,97 @@ a{color:inherit}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
+/* ============================================================
+   HERO v2 — franja de datos con iconos + panel de CTA
+   ============================================================ */
+
+.hero-v2{padding-bottom:0}
+.hero-v2 .hero-img{object-position:50% 38%;opacity:1}
+/* degradé pesado del lado del texto, liviano sobre la cara */
+.hero-v2::after{
+  background:
+    linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.68) 32%,
+                          rgba(18,12,10,.16) 56%,rgba(18,12,10,.32) 100%),
+    linear-gradient(180deg,rgba(18,12,10,.36) 0%,rgba(18,12,10,0) 24%);
+}
+.hero-v2 > *:not(picture):not(.hero-img){position:relative;z-index:2}
+.hero-v2 picture{display:contents}
+.hero-v2 .hero-in{padding-bottom:clamp(2rem,4vw,3rem)}
+.hero-v2 h1{letter-spacing:-.03em}
+.hero-rule{display:block;width:4.5rem;height:4px;background:var(--amarillo);
+  margin:clamp(1rem,2vw,1.5rem) 0;border-radius:2px}
+.hero-v2 .lead{max-width:38ch}
+
+/* ---------- franja de datos ---------- */
+.hero-datos{
+  max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);
+  display:grid;gap:0;
+}
+.dato-item{display:flex;align-items:center;gap:.9rem;padding-block:1rem}
+.dato-ico{
+  flex:none;display:grid;place-content:center;width:2.9rem;height:2.9rem;border-radius:50%;
+  background:rgba(22,15,12,.62);color:var(--amarillo);
+  box-shadow:inset 0 0 0 1px rgba(243,236,35,.32);
+}
+.dato-ico svg{width:1.35rem;height:1.35rem;display:block}
+.dato-txt{font-family:var(--label);font-weight:600;font-size:.74rem;
+  letter-spacing:.11em;text-transform:uppercase;line-height:1.5;opacity:.85}
+.dato-txt b{display:block;font-weight:700;opacity:1;letter-spacing:.08em}
+
+@media (min-width:900px){
+  .hero-datos{grid-template-columns:repeat(4,1fr);padding-bottom:clamp(2rem,4vw,3rem)}
+  .dato-item{padding-inline:1.75rem;padding-block:0}
+  .dato-item:first-child{padding-left:0}
+  .dato-item + .dato-item{border-left:1px solid rgba(255,255,255,.22)}
+}
+/* en mobile la franja baja al papel: fondo crema y acentos coral */
+@media (max-width:899px){
+  /* en pantalla angosta el degradé lateral tapa a Piku: pasa a scrim vertical */
+  /* la foto ocupa una banda de alto definido (no todo el hero): así
+     object-position encuadra de verdad y el titular se apoya abajo */
+  .hero-v2{--heroH:clamp(33rem,148vw,40rem)}
+  .hero-v2 .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 20%}
+  .hero-v2::after{inset:0 0 auto 0;height:var(--heroH)}
+  .hero-v2 .hero-in{min-height:var(--heroH);display:flex;flex-direction:column;
+    justify-content:flex-end;padding-top:2.5rem}
+  .hero::after{background:linear-gradient(180deg,rgba(18,12,10,.58) 0%,
+     rgba(18,12,10,.34) 38%,rgba(18,12,10,.80) 100%)}
+  .hero-datos{background:var(--arena);color:var(--tinta);
+    border-radius:20px 20px 0 0;margin-top:-1.5rem;
+    padding-top:.5rem}
+  .dato-ico{background:rgba(235,64,83,.12);color:var(--coral)}
+  .dato-item + .dato-item{border-top:1px solid var(--linea)}
+  .dato-txt{opacity:1;color:var(--tinta-2)}
+  .dato-txt b{color:var(--tinta)}
+}
+
+/* ---------- panel de CTA ---------- */
+.hero-panel{
+  background:var(--arena);color:var(--tinta);
+  max-width:calc(var(--wrap) - 2*var(--gut));margin-inline:auto;
+  border-radius:20px 20px 0 0;
+  padding:clamp(1.6rem,3.5vw,2.4rem) clamp(1.4rem,3.5vw,2.75rem) clamp(1.75rem,4vw,2.75rem);
+  display:grid;gap:clamp(1.4rem,3vw,1.9rem);
+}
+@media (max-width:899px){
+  .hero-panel{max-width:none;border-radius:0;padding-inline:var(--gut)}
+}
+.hero-panel .btns{gap:.85rem}
+.hero-panel .btn{padding:1.15em 2rem;font-size:.8rem}
+@media (max-width:520px){.hero-panel .btn{width:100%;justify-content:center}}
+
+.panel-extras{display:grid;gap:1.15rem;padding-top:clamp(1.2rem,3vw,1.6rem);
+  border-top:1px solid var(--linea)}
+@media (min-width:700px){
+  .panel-extras{grid-template-columns:1fr 1fr;gap:2.25rem}
+  .panel-extras > .extra + .extra{border-left:1px solid var(--linea);padding-left:2.25rem}
+}
+.extra{display:flex;gap:.9rem;align-items:flex-start}
+.extra svg{width:1.7rem;height:1.7rem;flex:none;color:var(--coral);margin-top:.1rem}
+.extra b{display:block;font-family:var(--label);font-weight:600;font-size:.74rem;
+  letter-spacing:.11em;text-transform:uppercase}
+.extra p{font-size:var(--fs-small);color:var(--tinta-2);margin-top:.25rem;line-height:1.55}
+
 </style>
 
 <nav class="nav">
@@ -308,7 +399,7 @@ a{color:inherit}
 </nav>
 
 <header class="hero">
-  <img class="hero-img" src="assets/grupo-de-pie.webp" alt="Grupo practicando yoga en ronda" width="1000" height="1500">
+  <img class="hero-img" src="assets/grupo-brazos.webp" style="object-position:50% 22%" alt="Piku con los brazos abiertos en una práctica al aire libre, rodeada por el grupo" width="1000" height="1500">
   <div class="hero-in stack">
     <p class="eyebrow" style="color:var(--amarillo)">Formación continua · Piku Yoga</p>
     <h1>Grupo de estudio<br>y prácticas docentes</h1>

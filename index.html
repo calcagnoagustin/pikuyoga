@@ -292,22 +292,22 @@ a{color:inherit}
    HERO v2 — franja de datos con iconos + panel de CTA
    ============================================================ */
 
-.hero{padding-bottom:0}
-.hero-img{object-position:50% 38%;opacity:1}
+.hero-v2{padding-bottom:0}
+.hero-v2 .hero-img{object-position:50% 38%;opacity:1}
 /* degradé pesado del lado del texto, liviano sobre la cara */
-.hero::after{
+.hero-v2::after{
   background:
     linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.68) 32%,
                           rgba(18,12,10,.16) 56%,rgba(18,12,10,.32) 100%),
     linear-gradient(180deg,rgba(18,12,10,.36) 0%,rgba(18,12,10,0) 24%);
 }
-.hero > *:not(picture):not(.hero-img){position:relative;z-index:2}
-.hero picture{display:contents}
-.hero .hero-in{padding-bottom:clamp(2rem,4vw,3rem)}
-.hero h1{letter-spacing:-.03em}
+.hero-v2 > *:not(picture):not(.hero-img){position:relative;z-index:2}
+.hero-v2 picture{display:contents}
+.hero-v2 .hero-in{padding-bottom:clamp(2rem,4vw,3rem)}
+.hero-v2 h1{letter-spacing:-.03em}
 .hero-rule{display:block;width:4.5rem;height:4px;background:var(--amarillo);
   margin:clamp(1rem,2vw,1.5rem) 0;border-radius:2px}
-.hero .lead{max-width:38ch}
+.hero-v2 .lead{max-width:38ch}
 
 /* ---------- franja de datos ---------- */
 .hero-datos{
@@ -336,10 +336,10 @@ a{color:inherit}
   /* en pantalla angosta el degradé lateral tapa a Piku: pasa a scrim vertical */
   /* la foto ocupa una banda de alto definido (no todo el hero): así
      object-position encuadra de verdad y el titular se apoya abajo */
-  .hero{--heroH:clamp(33rem,148vw,40rem)}
-  .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 20%}
-  .hero::after{inset:0 0 auto 0;height:var(--heroH)}
-  .hero .hero-in{min-height:var(--heroH);display:flex;flex-direction:column;
+  .hero-v2{--heroH:clamp(33rem,148vw,40rem)}
+  .hero-v2 .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 20%}
+  .hero-v2::after{inset:0 0 auto 0;height:var(--heroH)}
+  .hero-v2 .hero-in{min-height:var(--heroH);display:flex;flex-direction:column;
     justify-content:flex-end;padding-top:2.5rem}
   .hero::after{background:linear-gradient(180deg,rgba(18,12,10,.58) 0%,
      rgba(18,12,10,.34) 38%,rgba(18,12,10,.80) 100%)}
@@ -398,7 +398,7 @@ a{color:inherit}
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero hero-v2">
   <picture>
     <source media="(max-width:899px)" srcset="assets/hero-caminando-vert.webp">
     <img class="hero-img" src="assets/hero-caminando.webp" alt="Piku dando clase en una shala de adobe" width="1800" height="1200">
