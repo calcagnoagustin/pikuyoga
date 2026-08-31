@@ -380,6 +380,52 @@ a{color:inherit}
   letter-spacing:.11em;text-transform:uppercase}
 .extra p{font-size:var(--fs-small);color:var(--tinta-2);margin-top:.25rem;line-height:1.55}
 
+/* ---------- hero de Mentorías: figura completa, sin cortar la cabeza ----------
+   La foto es vertical y la figura de Piku ocupa del 20% al 62% del alto.
+   Con un hero bajo, el "cover" le comía la cabeza: se le da altura y se
+   reencuadra para que entre entera. */
+.hero-mentorias .hero-in{min-height:clamp(30rem,64vw,60rem);display:flex;
+  flex-direction:column;justify-content:center}
+.hero-mentorias .hero-img{object-position:50% 27%;opacity:.9}
+.hero-mentorias::after{
+  background:
+    linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.70) 34%,
+                          rgba(18,12,10,.22) 60%,rgba(18,12,10,.38) 100%),
+    linear-gradient(180deg,rgba(18,12,10,.40) 0%,rgba(18,12,10,0) 28%);
+}
+.hero-mentorias picture{display:contents}
+@media (max-width:899px){
+  /* la foto ocupa una banda arriba y el texto se apoya debajo, sobre el fondo
+     oscuro: así la figura entra entera y el titular no le pisa la cabeza */
+  .hero-mentorias{--heroH:clamp(26rem,96vw,34rem)}
+  .hero-mentorias .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 30%}
+  .hero-mentorias::after{inset:0 0 auto 0;height:var(--heroH);
+    background:linear-gradient(180deg,rgba(18,12,10,.30) 0%,rgba(18,12,10,.05) 30%,
+      rgba(18,12,10,.55) 78%,rgba(30,26,24,1) 100%)}
+  .hero-mentorias .hero-in{padding-top:calc(var(--heroH) - 2rem)}
+}
+
+/* ---------- hero del Grupo de Estudio: la ronda completa ----------
+   Foto apaisada, así que en desktop entra casi entera; en mobile se sirve
+   un recorte vertical centrado en Piku y el arco cercano del círculo. */
+.hero-grupo picture{display:contents}
+.hero-grupo .hero-img{object-position:50% 46%;opacity:.92}
+.hero-grupo::after{
+  background:
+    linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.66) 32%,
+                          rgba(18,12,10,.16) 58%,rgba(18,12,10,.30) 100%),
+    linear-gradient(180deg,rgba(18,12,10,.38) 0%,rgba(18,12,10,0) 26%);
+}
+@media (max-width:899px){
+  /* banda de foto arriba y texto apoyado debajo: si no, el titular tapa la ronda */
+  .hero-grupo{--heroH:clamp(22rem,82vw,28rem)}
+  .hero-grupo .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 22%}
+  .hero-grupo::after{inset:0 0 auto 0;height:var(--heroH);
+    background:linear-gradient(180deg,rgba(18,12,10,.28) 0%,rgba(18,12,10,.04) 32%,
+      rgba(18,12,10,.55) 80%,rgba(30,26,24,1) 100%)}
+  .hero-grupo .hero-in{padding-top:calc(var(--heroH) - 2rem)}
+}
+
 </style>
 
 <nav class="nav">
@@ -398,8 +444,11 @@ a{color:inherit}
   </div>
 </nav>
 
-<header class="hero">
-  <img class="hero-img" src="assets/grupo-brazos.webp" style="object-position:50% 22%" alt="Piku con los brazos abiertos en una práctica al aire libre, rodeada por el grupo" width="1000" height="1500">
+<header class="hero hero-grupo">
+  <picture>
+    <source media="(max-width:899px)" srcset="assets/grupo-ronda-vert.webp">
+    <img class="hero-img" src="assets/grupo-ronda.webp" alt="La ronda completa del grupo sentada en la shala, con Piku al frente" width="1800" height="1199">
+  </picture>
   <div class="hero-in stack">
     <p class="eyebrow" style="color:var(--amarillo)">Formación continua · Piku Yoga</p>
     <h1>Grupo de estudio<br>y prácticas docentes</h1>
