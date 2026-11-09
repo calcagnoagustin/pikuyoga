@@ -288,6 +288,19 @@ a{color:inherit}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
+
+/* --- testimonios --- */
+.testis{display:grid;gap:clamp(.9rem,2vw,1.3rem);grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:999px){.testis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:699px){.testis{grid-template-columns:1fr}}
+.testi{background:var(--papel);border:1px solid var(--linea);border-radius:14px;
+  padding:clamp(1.2rem,2.4vw,1.6rem);display:grid;gap:.75rem;align-content:start}
+.testi::before{content:"\201C";font-family:var(--display);font-weight:600;font-size:2.6rem;
+  line-height:.5;color:var(--coral);height:1.1rem}
+.testi p{font-size:var(--fs-body);color:var(--tinta-2);line-height:1.6}
+.testi .aut{font-family:var(--label);font-weight:700;font-size:var(--fs-label);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-2);margin-top:auto}
+.band-arena .testi{background:var(--papel)}
 </style>
 
 <nav class="nav" data-b="1">
@@ -416,8 +429,9 @@ a{color:inherit}
     <div class="stack">
       <p class="eyebrow" data-e="57">Quién da las clases</p>
       <h2 data-e="58">Piku Montiel</h2>
-      <p class="lead" data-e="59">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica.</p>
+      <p class="lead" data-e="59">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
       <p data-e="60">Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
+      <p>Dirijo la formación anual Yoga Esencial, sostengo un grupo de estudio permanente, doy clases semanales de Hatha Yoga, acompaño proyectos en mentorías individuales y llevo prácticas de Yoga a retiros y experiencias.</p>
     </div>
   </div>
 </section>
@@ -447,6 +461,56 @@ a{color:inherit}
         <div class="faq-body">Escribime por WhatsApp y te paso los medios de pago disponibles.</div>
       </details>
     </div>
+  </div>
+</section>
+
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="sec band-arena" id="testimonios">
+  <div class="wrap stack-lg rv">
+    <div class="stack" style="max-width:40ch">
+      <p class="eyebrow">Testimonios</p>
+      <h2>Lo que dicen quienes estudiaron con Piku.</h2>
+    </div>
+    <div class="testis">
+      <div class="testi">
+        <p>Expansiva, nutritiva, con deseos de seguir profundizando y veo una profe auténtica, humana, y muy generosa de sus saberes.</p>
+        <span class="aut">Guadalupe G.</span>
+      </div>
+      <div class="testi">
+        <p>Después de 4 años de recibirme, me dio impulso para comenzar a dar clases. Hoy tengo dos grupas: uno de seis mujeres adultas; otro más numeroso de personas ciegas.</p>
+        <span class="aut">Vanesa E.</span>
+      </div>
+      <div class="testi">
+        <p>Haber conocido a una profesora de yoga empática, con mucha sabiduría y que sabe cómo transmitir todo su conocimiento de forma clara y precisa.</p>
+        <span class="aut">Cecilia F.</span>
+      </div>
+      <div class="testi">
+        <p>Se sintió como ir a la casa de una amiga a tomar mate para hablar de cosas de la vida misma.</p>
+        <span class="aut">Gisele G.</span>
+      </div>
+      <div class="testi">
+        <p>La calidad y calidez de los maestros traspasa las distancias y las pantallas.</p>
+        <span class="aut">María Laura Z.</span>
+      </div>
+      <div class="testi">
+        <p>Ahora puedo confiar en mí para dar las clases de yoga con dirección.</p>
+        <span class="aut">Lara T.</span>
+      </div>
+      <div class="testi">
+        <p>Los miedos que tenía antes de este curso desaparecieron. Me siento segura de mí misma.</p>
+        <span class="aut">Analía V.</span>
+      </div>
+      <div class="testi">
+        <p>La vocación con la que enseñás se siente a través de la pantalla.</p>
+        <span class="aut">Alejandra O.</span>
+      </div>
+      <div class="testi">
+        <p>Un recorrido transformador, lleno de aprendizajes que me llevo tanto a la práctica como a mi vida.</p>
+        <span class="aut">Ticiana C.</span>
+      </div>
+    </div>
+    <p class="muted" style="font-size:var(--fs-small)">Devoluciones de alumnas y alumnos de las formaciones de Piku Yoga.</p>
   </div>
 </section>
 

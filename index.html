@@ -345,6 +345,25 @@ strong{font-weight:700;color:var(--tinta)}
 .cierre-sol .wrap-narrow{display:grid;gap:1rem;justify-items:center;text-align:center}
 .cierre-sol h2{font-size:clamp(1.8rem,4.2vw,2.8rem)}
 
+
+/* --- testimonios --- */
+.testis{display:grid;gap:clamp(.9rem,2vw,1.3rem);grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:999px){.testis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:699px){.testis{grid-template-columns:1fr}}
+.testi{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);
+  padding:clamp(1.2rem,2.4vw,1.6rem);display:grid;gap:.75rem;align-content:start}
+.testi::before{content:"\201C";font-family:var(--display);font-weight:900;font-size:2.4rem;
+  line-height:.55;color:var(--sol);height:1.1rem}
+.testi p{font-size:.99rem;color:var(--tinta-2);line-height:1.6}
+.testi .aut{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--tinta-3);margin-top:auto}
+
+/* --- temario del destacado --- */
+.temario{display:flex;flex-wrap:wrap;gap:.5rem .55rem;align-items:center}
+.temario-tit{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--tinta-3);margin-right:.3rem}
+.tema{font-family:var(--texto);font-weight:600;font-size:.88rem;background:var(--panel);
+  border:1px solid var(--linea);border-radius:999px;padding:.35rem .8rem;color:var(--tinta-2)}
 </style>
 </head>
 <body>
@@ -401,7 +420,7 @@ strong{font-weight:700;color:var(--tinta)}
 
   <div class="wrap destacado-in rv">
     <div class="stack">
-      <span class="chip-anio">Propuesta principal · 2027</span>
+      <span class="chip-anio">Formación anual · 2027</span>
       <h2>Yoga<br><span class="trazo">Esencial<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13.5C52 6.5 128 4.4 186 6.2c40 1.2 78 3.6 111 7.1" stroke="#FFD02E" stroke-width="11" stroke-linecap="round" fill="none"/></svg></span></h2>
       <p class="lead">Una formación anual para profundizar en la esencia del Yoga y desarrollar una <strong>enseñanza sensible y creativa</strong>.</p>
       <dl class="ficha">
@@ -418,6 +437,39 @@ strong{font-weight:700;color:var(--tinta)}
     </div>
     <div class="destacado-foto">
       <img src="assets/ye-vajrasana.webp" alt="Piku Montiel sentada en vajrasana, con los ojos cerrados" width="1000" height="1500" loading="lazy">
+    </div>
+  </div>
+
+  <div class="wrap stack-lg rv" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+    <div class="cards cards-3">
+      <div class="card">
+        <span class="card-num">01</span>
+        <h3>Un año de estudio</h3>
+        <p class="muted">Un tema por mes, de marzo a diciembre: historia y filosofía del Yoga, chakras, asanas, pranayamas, Yoga Nidra, meditación y pedagogía.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">02</span>
+        <h3>Online y a tu ritmo</h3>
+        <p class="muted">Clases en vivo los martes de 19 a 21 h por Zoom. Todas quedan grabadas, con acceso de por vida, más material de estudio y acompañamiento por WhatsApp.</p>
+      </div>
+      <div class="card">
+        <span class="card-num">03</span>
+        <h3>Diploma al completar</h3>
+        <p class="muted">Dos encuentros presenciales en Buenos Aires —hay que asistir al menos a uno— y el retiro de cierre en Villa de Merlo, donde se entregan los diplomas.</p>
+      </div>
+    </div>
+    <div class="temario">
+      <span class="temario-tit">El recorrido</span>
+      <span class="tema">Historia y filosofía</span>
+      <span class="tema">Chakras</span>
+      <span class="tema">Asanas</span>
+      <span class="tema">Pranayamas</span>
+      <span class="tema">Encuentro presencial</span>
+      <span class="tema">Yoga Nidra</span>
+      <span class="tema">Meditación</span>
+      <span class="tema">Pedagogía y proyectos</span>
+      <span class="tema">Encuentro presencial</span>
+      <span class="tema">Retiro y diplomas</span>
     </div>
   </div>
 </section>
@@ -496,9 +548,60 @@ strong{font-weight:700;color:var(--tinta)}
       <h2>Hola, soy<br>Piku Montiel.</h2>
       <hr class="regla">
       <p class="lead muted">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
-      <p class="muted">Dirijo la formación anual Yoga Esencial, un grupo de estudio permanente, clases semanales de Hatha Yoga y mentorías individuales. Todo eso también se armó desde cero: sé bastante bien lo que es tener una idea dando vueltas y no saber por dónde empezar a bajarla.</p>
+      <p class="muted">Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
+      <p class="muted">Dirijo la formación anual Yoga Esencial, sostengo un grupo de estudio permanente, doy clases semanales de Hatha Yoga, acompaño proyectos en mentorías individuales y llevo prácticas de Yoga a retiros y experiencias.</p>
       <p class="eyebrow" style="color:var(--tinta-2);margin-top:.4rem">Estudio <span style="color:var(--sol-oscuro)">●</span> Práctica <span style="color:var(--sol-oscuro)">●</span> Comunidad</p>
     </div>
+  </div>
+</section>
+
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="sec" id="testimonios">
+  <div class="wrap stack-lg rv">
+    <div class="stack" style="max-width:40ch">
+      <p class="eyebrow">Testimonios</p>
+      <h2>Lo que dicen quienes estudiaron con Piku.</h2>
+    </div>
+    <div class="testis">
+      <div class="testi">
+        <p>Expansiva, nutritiva, con deseos de seguir profundizando y veo una profe auténtica, humana, y muy generosa de sus saberes.</p>
+        <span class="aut">Guadalupe G.</span>
+      </div>
+      <div class="testi">
+        <p>Después de 4 años de recibirme, me dio impulso para comenzar a dar clases. Hoy tengo dos grupas: uno de seis mujeres adultas; otro más numeroso de personas ciegas.</p>
+        <span class="aut">Vanesa E.</span>
+      </div>
+      <div class="testi">
+        <p>Haber conocido a una profesora de yoga empática, con mucha sabiduría y que sabe cómo transmitir todo su conocimiento de forma clara y precisa.</p>
+        <span class="aut">Cecilia F.</span>
+      </div>
+      <div class="testi">
+        <p>Se sintió como ir a la casa de una amiga a tomar mate para hablar de cosas de la vida misma.</p>
+        <span class="aut">Gisele G.</span>
+      </div>
+      <div class="testi">
+        <p>La calidad y calidez de los maestros traspasa las distancias y las pantallas.</p>
+        <span class="aut">María Laura Z.</span>
+      </div>
+      <div class="testi">
+        <p>Ahora puedo confiar en mí para dar las clases de yoga con dirección.</p>
+        <span class="aut">Lara T.</span>
+      </div>
+      <div class="testi">
+        <p>Los miedos que tenía antes de este curso desaparecieron. Me siento segura de mí misma.</p>
+        <span class="aut">Analía V.</span>
+      </div>
+      <div class="testi">
+        <p>La vocación con la que enseñás se siente a través de la pantalla.</p>
+        <span class="aut">Alejandra O.</span>
+      </div>
+      <div class="testi">
+        <p>Un recorrido transformador, lleno de aprendizajes que me llevo tanto a la práctica como a mi vida.</p>
+        <span class="aut">Ticiana C.</span>
+      </div>
+    </div>
+    <p class="muted" style="font-size:var(--fs-small)">Devoluciones de alumnas y alumnos de las formaciones de Piku Yoga.</p>
   </div>
 </section>
 
