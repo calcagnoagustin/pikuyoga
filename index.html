@@ -4,661 +4,275 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Piku Yoga · Piku Montiel</title>
-<meta name="description" content="Formaciones, prácticas y acompañamiento en Yoga con Piku Montiel. Formación anual Yoga Esencial 2027, mentorías creativas, grupo de estudio, retiros y clases de Hatha Yoga online.">
-<link rel="canonical" href="https://pikuyoga.com/">
+<meta name="description" content="Formaciones, prácticas y acompañamiento en Yoga con Piku Montiel. Formación anual Yoga Esencial 2027, clases de Hatha Yoga, mentorías creativas, grupo de estudio y retiros.">
 <meta property="og:title" content="Piku Yoga · Piku Montiel">
-<meta property="og:description" content="Formaciones, prácticas y acompañamiento en Yoga con Piku Montiel. Formación anual Yoga Esencial 2027, mentorías creativas, grupo de estudio, retiros y clases de Hatha Yoga online.">
+<meta property="og:description" content="Formaciones, prácticas y acompañamiento en Yoga con Piku Montiel. Formación anual Yoga Esencial 2027, clases de Hatha Yoga, mentorías creativas, grupo de estudio y retiros.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-<meta property="og:url" content="https://pikuyoga.com/">
 <link rel="icon" href="assets/logo.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-
-/* ============================================================
-   PIKU YOGA — Yoga Esencial 2027
-   Sistema visual claro: crema + amarillo + trazos dibujados
-   ============================================================ */
-
 :root{
-  --crema:#FDF7EC;
-  --crema-2:#F7EFE0;
-  --crema-3:#F1E7D4;
-  --panel:#FFFFFF;
-  --linea:#E7DAC3;
-  --linea-2:#D8C7AB;
-
-  --tinta:#221E1B;
-  --tinta-2:#5E554E;
-  --tinta-3:#8B8077;
-
-  --sol:#FFD02E;          /* botones y trazo marcador */
-  --sol-oscuro:#F0BB07;
-  --limon:#F3EC23;        /* amarillo del logo, resaltados */
-  --salvia:#93A97C;
-  --blush:#F8D2C4;
-  --naranja:#E2803C;
-
-  --display:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --texto:'Karla',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-
-  --wrap:76rem;
-  --gut:clamp(1.15rem,4vw,2.5rem);
-  --r:22px;
-  --r-s:14px;
-
-  --fs-hero:clamp(3.1rem,9.2vw,6.6rem);
-  --fs-h2:clamp(2rem,4.6vw,3.3rem);
-  --fs-h3:clamp(1.15rem,2vw,1.4rem);
-  --fs-lead:clamp(1.08rem,1.9vw,1.32rem);
-  --fs-small:.95rem;
+  --crema:#FBF1E8;--crema-2:#F6E9DD;--blanco:#FFFAF5;--tinta:#13304A;--tinta-2:#3E5266;
+  --teal:#1D5E6E;--teal-2:#164B58;--lila:#A98BC4;--lila-claro:#F0E2EE;--celeste:#DDE8EE;--pill:#D5E5EC;
+  --amarillo:#F7D21E;--linea:#E9DCCF;
+  --f:'Nunito','Helvetica Neue',Arial,sans-serif;
+  --wrap:1120px;--gut:20px;--r:22px;
 }
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--crema);color:var(--tinta);
-  font-family:var(--texto);font-size:1.0625rem;line-height:1.65;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
-}
-img{max-width:100%;height:auto;display:block}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--f);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1.06;letter-spacing:-.02em;margin:0}
-h2{font-size:var(--fs-h2)}
-h3{font-size:var(--fs-h3);line-height:1.2;letter-spacing:-.01em}
-p{margin:0}
-ul{margin:0;padding:0;list-style:none}
-strong{font-weight:700;color:var(--tinta)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(251,241,232,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{width:54px;height:54px;border-radius:50%}
+.nav{display:none;gap:36px}
+.nav a{text-decoration:none;font-weight:600;font-size:17px}
+.nav a:hover{color:var(--teal)}
+.burger{width:44px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tinta)}
+.menu{display:none;border-top:1px solid var(--linea);padding:6px var(--gut) 14px}
+.menu a{display:block;padding:11px 0;text-decoration:none;font-weight:700;font-size:18px;border-bottom:1px solid var(--linea)}
+.menu a:last-child{border-bottom:0}
+.top.abierto .menu{display:block}
+/* piezas */
+.chip svg,.prop svg{width:14px;height:14px;flex:0 0 14px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--celeste);color:var(--tinta);border-radius:99px;padding:6px 16px;font-weight:800;font-size:14px;text-decoration:none}
+.eti{display:inline-block;background:var(--celeste);color:var(--tinta);border-radius:99px;padding:5px 16px;font-weight:800;font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase}
+.tit{font-weight:800;line-height:1.02;letter-spacing:-.5px;margin:0;font-size:clamp(38px,10vw,64px)}
+.tit .orn{display:inline-block;width:.5em;height:.5em;vertical-align:.1em;margin:0 .12em}
+.subr{display:block;width:min(100%,330px);height:14px;margin:6px auto 0}
+.bajada{font-size:17px;color:var(--tinta-2);margin:14px auto 0;max-width:30em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:18px;border-radius:99px;padding:12px 30px;min-height:48px;box-shadow:0 3px 0 var(--teal-2)}
+.btn:hover{background:var(--teal-2)}
+.btn svg{width:16px;height:16px;flex:0 0 16px}
+.nota{font-size:15px;color:var(--tinta-2);margin-top:12px}
+.foto{border-radius:var(--r);overflow:hidden;background:var(--crema-2)}
+.foto img{width:100%;height:100%;object-fit:cover}
+/* hero */
+.hero{padding:22px 0 30px;text-align:center}
+.hero .wrap{display:grid;gap:22px;align-items:center}
+.hero .txt{display:flex;flex-direction:column;align-items:center}
+.hero .txt>.eti,.hero .txt>.chip{margin-bottom:14px}
+.hero .btn{margin-top:20px}
+.hero .foto{aspect-ratio:4/3}
+.chipf{text-align:center}
+.hero-home .wrap{gap:16px}
+/* banda */
+.banda{background:var(--celeste)}
+.banda .wrap{display:flex;flex-direction:column;gap:6px;padding-top:14px;padding-bottom:14px}
+.banda .it{display:flex;align-items:center;justify-content:center;gap:14px;font-weight:700;font-size:16px;text-align:center}
+.banda .it::before,.banda .it::after{content:"";width:46px;height:1.5px;background:var(--teal);flex:0 0 46px;opacity:.7}
+.banda .loto{display:flex;justify-content:center}
+.banda .loto svg{width:30px;height:22px;color:var(--teal)}
+.banda .grande{font-size:21px}
+/* secciones */
+.sec{padding:30px 0}
+.h2{display:flex;align-items:flex-start;gap:12px;font-weight:800;font-size:clamp(25px,6.4vw,44px);line-height:1.08;margin:0 0 18px;letter-spacing:-.3px}
+.h2::before{content:"";width:4px;align-self:stretch;min-height:1em;background:var(--lila);border-radius:2px;flex:0 0 4px}
+.lista{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lista li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.35}
+.lista li::before{content:"";flex:0 0 3px;height:1.2em;margin-top:.08em;background:var(--lila);border-radius:2px}
+.lista.guion li::before{flex:0 0 22px;height:2px;margin-top:.68em}
+.pastilla{display:inline-block;background:var(--lila-claro);border-radius:99px;padding:9px 22px;font-weight:600;font-size:16px;text-align:center}
+.pastilla.azul{background:var(--pill)}
+.linea-txt{display:flex;align-items:center;gap:14px;justify-content:center;text-align:center;font-size:15px;color:var(--tinta-2);margin:20px 0 0}
+.linea-txt::before,.linea-txt::after{content:"";flex:1;max-width:160px;height:1.5px;background:var(--teal);opacity:.55}
+.linea-txt.lila::before,.linea-txt.lila::after{background:var(--lila)}
+.temas{text-align:center;font-size:17px;margin-top:10px}
+/* home: propuestas */
+.camino{text-align:center;padding:24px 0 8px}
+.camino svg{width:40px;height:30px;color:var(--teal);display:block;margin:0 auto 2px}
+.camino h2{display:flex;align-items:center;justify-content:center;gap:14px;margin:0;font-weight:800;font-size:clamp(18px,5vw,34px)}
+.camino h2::before,.camino h2::after{content:"";flex:1;max-width:130px;height:1.5px;background:var(--tinta);opacity:.8}
+.props{display:grid;gap:12px;padding:16px 0 30px}
+.destacada{background:var(--lila-claro);border-radius:var(--r);padding:20px 18px 22px;text-align:center}
+.destacada .tit{font-size:clamp(30px,8vw,44px);white-space:nowrap}
+.destacada .subr{width:min(100%,260px)}
+.destacada .dato{margin:0;padding:9px 0;border-bottom:1.5px solid rgba(19,48,74,.18);font-size:16px}
+.destacada .dato:first-of-type{padding-top:6px}
+.destacada .precio{font-weight:800;font-size:20px;padding:10px 0 12px;margin:0}
+.destacada .btn{font-size:17px;padding:10px 24px;min-height:44px}
+.prop{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:13px 14px 13px 0;text-decoration:none}
+.prop .n{border-left:4px solid var(--lila);padding-left:14px;margin-left:12px}
+.prop h3{margin:0;font-weight:800;font-size:16.5px;line-height:1.15}
+.nw{white-space:nowrap}
+.prop h3 svg{width:13px;height:13px;margin-left:4px;vertical-align:.05em}
+.prop p{margin:3px 0 0;font-size:13.5px;color:var(--tinta-2)}
+.prop .pr{background:var(--pill);border-radius:99px;padding:6px 14px;font-weight:800;font-size:13.5px;text-align:center;line-height:1.15;white-space:nowrap}
+.prop:hover{border-color:var(--lila)}
+/* banner Piku */
+.piku{padding:10px 0 30px}
+.piku .ban{display:grid;grid-template-columns:42% 1fr;align-items:center;background:var(--crema-2);border-radius:var(--r);overflow:hidden;min-height:150px}
+.piku .ban .foto{border-radius:0;height:100%;position:relative;min-height:150px;-webkit-mask-image:linear-gradient(to right,#000 60%,transparent);mask-image:linear-gradient(to right,#000 60%,transparent)}
+.piku .ban .foto img{position:absolute;inset:0}
+.piku .ban .t{border-left:4px solid var(--lila);margin:16px 16px 16px 4px;padding-left:14px}
+.piku .ban h2{margin:0;font-weight:800;font-size:clamp(22px,5.6vw,46px);line-height:1.05}
+.piku .ban p{margin:6px 0 0;font-size:clamp(14px,3.6vw,24px);color:var(--tinta-2)}
+.bio{max-width:44em;margin:22px auto 0;display:grid;gap:12px;font-size:17px;color:var(--tinta-2)}
+.bio p{margin:0}
+/* testimonios */
+.testi{display:grid;gap:12px}
+.testi figure{margin:0;background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:18px 18px 16px}
+.testi blockquote{margin:0;font-size:16px;line-height:1.45}
+.testi figcaption{margin-top:10px;font-weight:800;font-size:14px;color:var(--teal)}
+.testi figure:nth-child(n+4){display:none}
+.chico{font-size:14px;color:var(--tinta-2);text-align:center;margin-top:14px}
+/* cta final */
+.cta{background:var(--lila-claro);text-align:center;padding:36px 0}
+.cta h2{margin:0;font-weight:800;font-size:clamp(28px,7vw,44px);line-height:1.05}
+.cta p{max-width:30em;margin:10px auto 0;color:var(--tinta-2)}
+.cta .acc{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.btn.claro{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+.btn.claro:hover{background:var(--teal);color:#fff}
+/* footer */
+.pie{background:var(--tinta);color:#E8EEF2;padding:34px 0 26px;font-size:15px}
+.pie .wrap{display:grid;gap:24px}
+.pie img{width:52px;height:52px;border-radius:50%}
+.pie h4{margin:0 0 8px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9FB7C6}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pie a{text-decoration:none}
+.pie a:hover{text-decoration:underline}
+.pie .lema{margin:10px 0 0;color:#B9C9D3}
+.pie .fin{border-top:1px solid rgba(255,255,255,.15);padding-top:16px;color:#9FB7C6;font-size:13px}
+/* tarjetas retiros */
+.exps{display:grid;gap:16px}
+.exp{display:grid;grid-template-columns:44% 1fr;gap:14px;align-items:center;text-decoration:none}
+.exp .foto{aspect-ratio:4/3}
+.exp .n{border-left:4px solid var(--lila);padding-left:12px}
+.exp h3{margin:0;font-weight:800;font-size:19px;line-height:1.15}
+.exp p{margin:3px 0 8px;font-size:15px;color:var(--tinta-2)}
+.exp .pr{white-space:nowrap;display:inline-block;background:var(--pill);border-radius:99px;padding:5px 16px;font-weight:800;font-size:16px}
+/* bloques de 2 o 3 columnas */
+.cols3{display:grid;gap:10px}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:12px}.par .foto{aspect-ratio:4/5}
+.lado{display:grid;gap:18px}
+.lado>.foto{aspect-ratio:4/3}
+.tit.g{font-size:clamp(28px,7.4vw,54px)}
+.cols3>div h3{margin:0;font-weight:800;font-size:19px}
+.cols3>div p{margin:2px 0 0;font-size:15px;color:var(--tinta-2)}
+.precios{display:grid;gap:8px;margin-top:16px}
+.precios .p{background:var(--celeste);border-radius:14px;padding:9px 14px;text-align:center;font-size:16px}
+.precios .p b{font-size:22px;font-weight:800;margin-left:4px}
+.pills{display:grid;gap:8px;margin-top:18px}
+/* plan de estudio */
+.plan{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plan li{display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:baseline;background:var(--blanco);border:1.5px solid var(--linea);border-radius:14px;padding:11px 14px}
+.plan li span{font-weight:800;color:var(--teal);font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.plan li.pres{background:var(--celeste);border-color:var(--celeste)}
+.duo{display:grid;gap:12px}
+.caja{background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:18px}
+.caja h3{margin:0 0 6px;font-weight:800;font-size:19px}
+.caja p{margin:4px 0 0;color:var(--tinta-2);font-size:16px}
+.caja .k{font-weight:800;color:var(--teal);font-size:13px;letter-spacing:2px;text-transform:uppercase}
 
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
-.wrap-narrow{max-width:54rem;margin-inline:auto;padding-inline:var(--gut)}
-.sec{padding-block:clamp(3.5rem,8vw,6.5rem)}
-.stack{display:grid;gap:1.1rem;align-content:start}
-.stack-lg{display:grid;gap:clamp(1.8rem,4vw,3rem);align-content:start}
-.muted{color:var(--tinta-2)}
-
-/* --- etiquetas y micro-tipografía --- */
-.eyebrow{
-  font-family:var(--mono);font-weight:600;font-size:.76rem;
-  text-transform:uppercase;letter-spacing:.17em;color:var(--naranja);
+@media (min-width:860px){
+  :root{--gut:32px}
+  body{font-size:18px}
+  .nav{display:flex}.burger,.menu{display:none!important}
+  .top .wrap{height:80px}.logo img{width:66px;height:66px}
+  .hero{padding:34px 0 40px;text-align:left}
+  .hero .wrap{grid-template-columns:1fr 1.2fr;gap:44px}
+  .hero.inv .wrap{grid-template-columns:1fr 1.05fr}
+  .hero.inv .foto{order:-1}
+  .hero .txt{align-items:flex-start}
+  .hero.centro .txt{align-items:center;text-align:center}
+  .chipf{grid-column:1/-1;margin-bottom:-14px}
+  .hero .bajada{margin-left:0;font-size:20px}
+  .hero.centro .bajada{margin:14px auto 0}
+  .hero .subr{margin-left:0}
+  .hero.centro .subr{margin:6px auto 0}
+  .hero .foto{aspect-ratio:auto;height:420px}
+  .hero.bleed{padding:0}
+  .hero.bleed .wrap{max-width:none;padding:0;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:0}
+  .hero.bleed .txt{padding:40px 24px 40px max(32px,calc((100vw - var(--wrap))/2 + 32px))}
+  .hero.bleed .foto{border-radius:0;height:520px;-webkit-mask-image:linear-gradient(to right,transparent,#000 22%);mask-image:linear-gradient(to right,transparent,#000 22%)}
+  .tit{font-size:clamp(52px,5.2vw,66px)}
+  .hero-home .tit{font-size:clamp(52px,5vw,62px);white-space:nowrap}
+  .banda .wrap{flex-direction:row;justify-content:center;align-items:center;gap:26px;padding-top:18px;padding-bottom:18px}
+  .banda .it{font-size:20px}
+  .banda .it::before,.banda .it::after{display:none}
+  .banda .wrap::before,.banda .wrap::after{content:"";width:70px;height:1.5px;background:var(--teal);opacity:.7}
+  .banda .sep{width:1.5px;height:26px;background:var(--lila)}
+  .banda .loto svg{width:46px;height:32px}
+  .banda .grande{font-size:26px}
+  .sec{padding:44px 0}
+  .lista{gap:14px}.lista li{font-size:21px}
+  .tit.g{font-size:54px;white-space:nowrap}
+  .lado{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .lado.ancho{grid-template-columns:1.25fr 1fr}
+  .lado.angosto{grid-template-columns:.8fr 1.6fr}
+  .lado>.foto{aspect-ratio:auto;height:100%;min-height:300px}
+  .props{grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+  .destacada{grid-row:1/3;padding:26px 32px;display:flex;flex-direction:column;justify-content:center}
+  .prop{grid-template-columns:1fr;align-content:start;padding:18px 18px 18px 0;gap:10px}
+  .prop h3{font-size:24px;min-height:2.3em}.prop p{font-size:16px}
+  br.m{display:none}
+  .prop .pr{justify-self:start;margin-left:30px;font-size:16px;padding:7px 22px}
+  .piku .ban{grid-template-columns:44% 1fr;min-height:230px}
+  .piku .ban .t{margin:24px 24px 24px 8px;padding-left:22px}
+  .testi{grid-template-columns:repeat(3,1fr)}
+  .testi figure:nth-child(n+4){display:block}
+  .exps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .exp{grid-template-columns:1fr;gap:12px;align-items:start}
+  .exp .row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+  .exp p{margin-bottom:0}
+  .cols3{grid-template-columns:repeat(3,1fr);gap:0}
+  .cols3>div{padding:0 22px;border-left:1.5px solid var(--lila)}
+  .cols3>div:first-child{border-left:0;padding-left:0}
+  .cols3.centro>div{text-align:center}
+  .precios{grid-template-columns:repeat(3,1fr);gap:12px}
+  .precios .p{padding:12px}
+  .precios .p b{display:block;font-size:30px;margin:0}
+  .pills{grid-template-columns:auto auto;justify-content:start;gap:14px}
+  .duo{grid-template-columns:1fr 1fr}
+  .pie .wrap{grid-template-columns:1.4fr 1fr 1fr}
+  .pie .fin{grid-column:1/-1}
 }
-.chip-anio{
-  display:inline-block;justify-self:start;font-family:var(--mono);font-weight:600;
-  font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;
-  background:var(--limon);color:var(--tinta);
-  padding:.5rem .95rem;border-radius:999px;
-}
-.mark{
-  display:inline-block;font-family:var(--mono);font-weight:600;
-  font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--limon);color:var(--tinta);padding:.25rem .55rem;border-radius:5px;
-}
-.dato{font-family:var(--mono);font-size:.9rem;color:var(--tinta-2)}
-
-/* --- trazo marcador bajo un título --- */
-.trazo{position:relative;display:inline-block}
-.trazo svg{position:absolute;left:-1%;bottom:-.1em;width:102%;height:.38em;z-index:-1}
-.regla{width:92px;height:7px;border-radius:4px;background:var(--sol);border:0;margin:0}
-
-/* --- botones --- */
-.btns{display:flex;flex-wrap:wrap;gap:.7rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:var(--display);font-weight:800;font-size:1rem;
-  padding:.92rem 1.5rem;border-radius:999px;text-decoration:none;
-  border:2px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
-}
-.btn-sol{background:var(--sol);color:var(--tinta);box-shadow:0 6px 0 var(--sol-oscuro)}
-.btn-sol:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--sol-oscuro)}
-.btn-line{background:transparent;color:var(--tinta);border-color:var(--tinta)}
-.btn-line:hover{background:var(--tinta);color:var(--crema)}
-.btn-ghost{background:var(--panel);color:var(--tinta);border-color:var(--linea)}
-.btn-ghost:hover{border-color:var(--tinta)}
-
-/* --- nav --- */
-.nav{position:sticky;top:0;z-index:40;padding:.75rem 0;background:rgba(253,247,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
-.nav.scrolled{border-bottom-color:var(--linea)}
-.nav-in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);display:flex;align-items:center;gap:1.4rem}
-.nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:800;font-size:.95rem;letter-spacing:.01em}
-.nav-logo img{width:42px;height:42px;border-radius:50%}
-.nav-links{display:flex;gap:1.4rem;margin-left:auto}
-.nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--tinta-2);padding-block:.25rem;border-bottom:2px solid transparent}
-.nav-links a:hover{color:var(--tinta);border-bottom-color:var(--sol)}
-.nav .btn{padding:.62rem 1.1rem;font-size:.9rem;box-shadow:0 4px 0 var(--sol-oscuro)}
-@media (max-width:899px){
-  .nav-links{display:none}
-  .nav .btn{margin-left:auto}
-}
-
-/* --- adornos --- */
-.deco{position:absolute;pointer-events:none;z-index:0}
-.blob{border-radius:50%}
-.blob-sol{background:var(--limon);opacity:.85}
-.blob-blush{background:var(--blush);opacity:.75}
-
-/* --- hero --- */
-.hero{position:relative;padding-block:clamp(2rem,5vw,4rem) clamp(2.5rem,5vw,4rem);overflow:hidden}
-.hero-in{position:relative;z-index:2;display:grid;gap:clamp(2rem,4vw,3.5rem);align-items:center;
-  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
-.hero h1{font-size:var(--fs-hero);font-weight:900;letter-spacing:-.035em}
-.hero .lead{font-size:var(--fs-lead);color:var(--tinta-2);max-width:34ch;line-height:1.55}
-.hero-con{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:800;font-size:1.05rem}
-.hero-con::before{content:"";width:5px;height:1.5em;border-radius:3px;background:var(--sol)}
-.hero-nota{font-family:var(--mono);font-size:.85rem;color:var(--tinta-2)}
-.hero-foto{position:relative}
-.hero-foto img{border-radius:var(--r);width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:50% 28%;
-  box-shadow:0 22px 50px -28px rgba(60,40,20,.5)}
-.hero-sello{
-  position:absolute;right:-.6rem;bottom:1.6rem;z-index:3;
-  background:var(--panel);border:1px solid var(--linea);border-radius:16px;
-  padding:.7rem 1rem;box-shadow:0 12px 28px -18px rgba(60,40,20,.5);
-  font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-2);
-  display:grid;gap:.15rem;max-width:13rem;
-}
-.hero-sello b{font-family:var(--display);font-size:.95rem;letter-spacing:0;text-transform:none;color:var(--tinta)}
-@media (max-width:899px){
-  .hero-in{grid-template-columns:1fr}
-  .hero-foto img{aspect-ratio:1000/1500;object-position:50% 50%}
-  .hero-sello{right:.5rem;bottom:.8rem}
-  .deco-sm{display:none}
-}
-
-/* --- tira de datos --- */
-.tira{background:var(--crema-2);border-block:1px solid var(--linea)}
-.tira-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(.9rem,3vw,2.6rem);
-  padding-block:1.1rem;text-align:center}
-.tira-item{font-family:var(--display);font-weight:800;font-size:clamp(.98rem,1.7vw,1.1rem);display:flex;align-items:center;gap:.6rem}
-.tira-item small{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--tinta-3);display:block}
-.tira-sep{width:26px;height:26px;color:var(--salvia);flex:none}
-@media (max-width:599px){.tira-sep{display:none}.tira-in{gap:.5rem 1.4rem}}
-
-/* --- paneles y tarjetas --- */
-.panel{background:var(--crema-3);border-radius:var(--r);padding:clamp(1.5rem,3.4vw,2.4rem)}
-.card{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);
-  padding:clamp(1.3rem,2.6vw,1.8rem);display:grid;gap:.6rem;align-content:start}
-.cards{display:grid;gap:clamp(.9rem,2vw,1.3rem)}
-.cards-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.cards-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:899px){.cards-3{grid-template-columns:1fr}.cards-2{grid-template-columns:1fr}}
-.card-num{font-family:var(--display);font-weight:900;font-size:1.05rem;width:2.1rem;height:2.1rem;
-  border-radius:50%;background:var(--limon);display:grid;place-items:center;color:var(--tinta)}
-
-/* --- listas con flecha --- */
-.lista{display:grid;gap:.6rem}
-.lista li{display:grid;grid-template-columns:1.25rem 1fr;gap:.55rem;align-items:start;color:var(--tinta-2)}
-.lista li::before{
-  content:"";margin-top:.46em;width:13px;height:13px;flex:none;
-  background:var(--naranja);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 2.5 11 8l-8 5.5V9.6L7.4 8 3 6.4z'/%3E%3C/svg%3E") center/contain no-repeat;
-  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 2.5 11 8l-8 5.5V9.6L7.4 8 3 6.4z'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-.lista-linea li{border-bottom:1px solid var(--linea);padding-bottom:.6rem}
-.lista-linea li:last-child{border-bottom:0;padding-bottom:0}
-
-/* --- bloque texto + foto --- */
-.duo{display:grid;gap:clamp(1.6rem,4vw,3.2rem);align-items:center;grid-template-columns:repeat(2,minmax(0,1fr))}
-.duo img{border-radius:var(--r);width:100%;object-fit:cover}
-@media (max-width:899px){.duo{grid-template-columns:1fr}}
-
-/* --- plan de estudio --- */
-.plan{border-top:2px solid var(--tinta);margin-top:.4rem}
-.plan-fila{display:grid;grid-template-columns:2.6rem 10.5rem 1fr;gap:.6rem 1.2rem;align-items:baseline;
-  padding:.95rem .9rem;border-bottom:1px solid var(--linea)}
-.plan-fila:last-child{border-bottom:2px solid var(--tinta)}
-.plan-n{font-family:var(--mono);font-size:.82rem;color:var(--tinta-3)}
-.plan-mes{font-family:var(--mono);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
-.plan-tema{font-size:1.02rem;color:var(--tinta-2)}
-.plan-fila.hito{background:var(--crema-3)}
-.plan-fila.hito .plan-tema{font-family:var(--display);font-weight:800;color:var(--tinta)}
-.plan-fila.hito .plan-n{color:transparent;position:relative}
-.plan-fila.hito .plan-n::after{content:"";position:absolute;left:.55rem;top:.42em;width:9px;height:9px;border-radius:50%;background:var(--sol)}
-@media (max-width:699px){
-  .plan-fila{grid-template-columns:1.9rem 1fr;row-gap:.2rem}
-  .plan-tema{grid-column:2}
-}
-
-/* --- encuentros --- */
-.hito-card{display:grid;grid-template-columns:auto 1fr;gap:1rem 1.5rem;align-items:start;
-  padding:clamp(1.2rem,2.6vw,1.7rem) 0;border-bottom:1px solid var(--linea)}
-.hito-card:last-of-type{border-bottom:0}
-.hito-meses{display:grid;gap:.4rem;justify-items:start}
-@media (max-width:699px){.hito-card{grid-template-columns:1fr}}
-
-/* --- banda foto --- */
-.banda{position:relative;border-radius:var(--r);overflow:hidden;isolation:isolate}
-.banda img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:50% 46%;z-index:-2}
-.banda::after{content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(100deg,rgba(25,18,12,.82) 0%,rgba(25,18,12,.55) 45%,rgba(25,18,12,.25) 100%)}
-.banda-in{padding:clamp(2.4rem,7vw,5rem) clamp(1.4rem,4vw,3.2rem);color:#fff;min-height:clamp(16rem,34vw,24rem);
-  display:grid;align-content:end;gap:.9rem;max-width:40rem}
-.banda-in h2{color:#fff}
-
-/* --- precios --- */
-.precio-fila{display:grid;grid-template-columns:1fr auto;gap:.4rem 1.5rem;align-items:end;
-  padding:1rem .2rem;border-bottom:1px solid var(--linea)}
-.precio-fila:first-of-type{border-top:1px solid var(--linea)}
-.precio-mod{font-family:var(--mono);font-size:.95rem;color:var(--tinta-2)}
-.precio-val{font-family:var(--display);font-weight:900;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.03em;line-height:1}
-.precio-tot{text-align:right}
-.precio-tot small{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-3);display:block}
-.precio-tot b{font-family:var(--display);font-weight:800;font-size:clamp(1.05rem,2.2vw,1.4rem)}
-.precio-destacado{background:var(--limon);border-radius:var(--r-s);padding:1rem 1.1rem;margin:-.2rem -1.1rem}
-@media (max-width:599px){
-  .precio-fila{grid-template-columns:1fr}
-  .precio-tot{text-align:left}
-}
-
-/* --- cita --- */
-.cita-bloque{text-align:center;display:grid;gap:1.2rem;justify-items:center}
-.cita-marca{font-family:var(--display);font-weight:900;font-size:3.6rem;line-height:.6;color:var(--sol)}
-.cita{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,4.2vw,2.9rem);line-height:1.12;
-  letter-spacing:-.025em;max-width:18ch}
-
-/* --- cierre --- */
-.cierre{background:var(--crema-2);border-top:1px solid var(--linea)}
-
-/* --- footer --- */
-.foot{background:var(--tinta);color:#EFE6DA;padding-block:clamp(2.5rem,5vw,3.5rem) 1.5rem}
-.foot-in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);
-  display:grid;gap:2rem;grid-template-columns:repeat(3,minmax(0,1fr))}
-.foot a{color:#EFE6DA;text-decoration:none;font-size:.96rem}
-.foot a:hover{color:var(--sol)}
-.foot-links{display:grid;gap:.6rem;align-content:start}
-.foot-tit{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#9C9188}
-.foot-legal{max-width:var(--wrap);margin:2.5rem auto 0;padding-inline:var(--gut);
-  border-top:1px solid #3A332E;padding-top:1.2rem;font-size:.82rem;color:#9C9188;
-  display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between}
-@media (max-width:899px){.foot-in{grid-template-columns:1fr;gap:1.8rem}}
-
-/* --- reveal --- */
-.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-/* ============ HOME — reglas propias ============ */
-
-/* barra de anuncio */
-.anuncio{background:var(--sol);color:var(--tinta)}
-.anuncio-in{max-width:var(--wrap);margin-inline:auto;padding:.6rem var(--gut);
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.3rem .8rem;text-align:center}
-.anuncio a{font-family:var(--display);font-weight:800;font-size:.95rem;text-decoration:none;
-  display:inline-flex;align-items:center;gap:.4rem}
-.anuncio a:hover{text-decoration:underline;text-underline-offset:3px}
-.anuncio .et{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase}
-
-/* hero del home: más bajo que el de una landing de producto */
-.hero-home .hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
-.hero-home h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:900;letter-spacing:-.032em}
-.hero-home .hero-foto img{aspect-ratio:4/3.1;object-position:50% 38%}
-@media (max-width:899px){
-  .hero-home .hero-in{grid-template-columns:1fr}
-  .hero-home .hero-foto img{aspect-ratio:4/3.4}
-}
-
-/* bloque destacado */
-.destacado{background:var(--crema-2);border-block:1px solid var(--linea);position:relative;overflow:hidden}
-.destacado-in{position:relative;z-index:2;display:grid;gap:clamp(1.8rem,4vw,3.4rem);align-items:center;
-  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
-.destacado h2{font-size:clamp(2.6rem,6vw,4.2rem);font-weight:900;letter-spacing:-.035em}
-.destacado-foto img{border-radius:var(--r);width:100%;aspect-ratio:4/4.5;object-fit:cover;object-position:50% 28%;
-  box-shadow:0 22px 50px -28px rgba(60,40,20,.5)}
-.ficha{display:grid;gap:0;border-top:1px solid var(--linea-2);margin-top:.4rem}
-.ficha div{display:grid;grid-template-columns:8.5rem 1fr;gap:.2rem 1rem;padding:.6rem .1rem;
-  border-bottom:1px solid var(--linea-2);align-items:baseline}
-.ficha dt{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--tinta-3)}
-.ficha dd{margin:0;font-family:var(--display);font-weight:700;font-size:1.02rem}
-@media (max-width:599px){.ficha div{grid-template-columns:1fr}}
-@media (max-width:899px){
-  .destacado-in{grid-template-columns:1fr}
-  .destacado-foto img{aspect-ratio:4/3.6;object-position:50% 24%}
-}
-
-/* grilla de propuestas */
-.props{display:grid;gap:clamp(1rem,2.2vw,1.5rem);grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:799px){.props{grid-template-columns:1fr}}
-.prop{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;
-  display:grid;grid-template-rows:auto 1fr;text-decoration:none;color:inherit;
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
-.prop:hover{transform:translateY(-3px);border-color:var(--linea-2);box-shadow:0 18px 38px -26px rgba(60,40,20,.55)}
-.prop:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
-.prop-foto{aspect-ratio:16/8;overflow:hidden;background:var(--crema-3)}
-.prop-foto img{width:100%;height:100%;object-fit:cover}
-.prop-in{padding:clamp(1.15rem,2.4vw,1.5rem);display:flex;flex-direction:column;gap:.55rem}
-.prop h3{font-size:clamp(1.2rem,2.2vw,1.45rem)}
-.prop .para{color:var(--tinta-2);font-size:.98rem}
-.prop-pie{display:flex;flex-wrap:wrap;gap:.4rem .9rem;align-items:baseline;
-  margin-top:auto;padding-top:.75rem;border-top:1px solid var(--linea)}
-.prop-cuando{font-family:var(--mono);font-size:.78rem;color:var(--tinta-2)}
-.prop-valor{font-family:var(--display);font-weight:800;font-size:1rem;margin-left:auto;white-space:nowrap}
-.prop-ver{font-family:var(--display);font-weight:800;font-size:.92rem;color:var(--tinta);
-  display:inline-flex;align-items:center;gap:.35rem}
-.prop:hover .prop-ver{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--sol);text-decoration-thickness:2px}
-.prop-otro{background:var(--crema-3);border-color:var(--linea-2)}
-
-/* cierre amarillo */
-.cierre-sol{background:var(--limon)}
-.cierre-sol .wrap-narrow{display:grid;gap:1rem;justify-items:center;text-align:center}
-.cierre-sol h2{font-size:clamp(1.8rem,4.2vw,2.8rem)}
-
-
-/* --- testimonios --- */
-.testis{display:grid;gap:clamp(.9rem,2vw,1.3rem);grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:999px){.testis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:699px){.testis{grid-template-columns:1fr}}
-.testi{background:var(--panel);border:1px solid var(--linea);border-radius:var(--r);
-  padding:clamp(1.2rem,2.4vw,1.6rem);display:grid;gap:.75rem;align-content:start}
-.testi::before{content:"\201C";font-family:var(--display);font-weight:900;font-size:2.4rem;
-  line-height:.55;color:var(--sol);height:1.1rem}
-.testi p{font-size:.99rem;color:var(--tinta-2);line-height:1.6}
-.testi .aut{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--tinta-3);margin-top:auto}
-
-/* --- temario del destacado --- */
-.temario{display:flex;flex-wrap:wrap;gap:.5rem .55rem;align-items:center}
-.temario-tit{font-family:var(--mono);font-weight:600;font-size:.72rem;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--tinta-3);margin-right:.3rem}
-.tema{font-family:var(--texto);font-weight:600;font-size:.88rem;background:var(--panel);
-  border:1px solid var(--linea);border-radius:999px;padding:.35rem .8rem;color:var(--tinta-2)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="anuncio">
-  <div class="anuncio-in">
-    <span class="et">Inscripción abierta</span>
-    <a href="yogaesencial/">Yoga Esencial · Formación anual 2027 <span aria-hidden="true">→</span></a>
-  </div>
-</div>
-
-<nav class="nav" id="nav">
-  <div class="nav-in">
-    <a class="nav-logo" href="./">
-      <img src="assets/logo.webp" alt="Piku Yoga" width="42" height="42">
-      <span>Piku Yoga</span>
-    </a>
-    <div class="nav-links">
-      <a href="#propuestas">Propuestas</a>
-      <a href="#quien-soy">Quién soy</a>
-    </div>
-    <a class="btn btn-sol" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20tus%20propuestas">Escribime</a>
-  </div>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero hero-home">
-  <div class="deco blob blob-sol" style="width:clamp(80px,12vw,150px);aspect-ratio:1;left:-3%;top:10%"></div>
-  <div class="deco blob blob-blush" style="width:clamp(90px,13vw,170px);aspect-ratio:1;right:-4%;bottom:-4%;opacity:.5"></div>
-  <svg class="deco deco-sm" style="width:clamp(44px,6vw,74px);left:3%;bottom:14%;color:var(--sol)" viewBox="0 0 60 60" aria-hidden="true">
-    <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
-      <path d="M8 46 16 34"/><path d="M26 44 34 32"/><path d="M44 42 52 30"/>
-    </g>
-  </svg>
-
-  <div class="wrap hero-in">
-    <div class="stack">
-      <p class="eyebrow">Piku Montiel · Yoga</p>
-      <h1>Estudiar,<br>practicar y<br><span class="trazo">enseñar Yoga<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13.5C52 6.5 128 4.4 186 6.2c40 1.2 78 3.6 111 7.1" stroke="#FFD02E" stroke-width="11" stroke-linecap="round" fill="none"/></svg></span>.</h1>
-      <p class="lead">Formaciones, prácticas y acompañamiento para quienes quieren profundizar en su camino dentro del Yoga. Online, desde donde estés.</p>
-      <div class="btns" style="margin-top:.4rem">
-        <a class="btn btn-sol" href="#propuestas">Ver las propuestas</a>
-        <a class="btn btn-line" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20tus%20propuestas">Escribime por WhatsApp</a>
-      </div>
-    </div>
-    <div class="hero-foto">
-      <img src="assets/hero-caminando.webp" alt="Piku Montiel acompañando a un grupo en la shala" width="1800" height="1200" fetchpriority="high">
-    </div>
-  </div>
-</header>
-
-<!-- ============ DESTACADO: YOGA ESENCIAL ============ -->
-<section class="sec destacado">
-  <div class="deco blob blob-blush" style="width:clamp(110px,15vw,200px);aspect-ratio:1;left:-5%;bottom:-8%;opacity:.45"></div>
-
-  <div class="wrap destacado-in rv">
-    <div class="stack">
-      <span class="chip-anio">Formación anual · 2027</span>
-      <h2>Yoga<br><span class="trazo">Esencial<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13.5C52 6.5 128 4.4 186 6.2c40 1.2 78 3.6 111 7.1" stroke="#FFD02E" stroke-width="11" stroke-linecap="round" fill="none"/></svg></span></h2>
-      <p class="lead">Una formación anual para profundizar en la esencia del Yoga y desarrollar una <strong>enseñanza sensible y creativa</strong>.</p>
-      <dl class="ficha">
-        <div><dt>Cursada</dt><dd>Marzo a diciembre de 2027</dd></div>
-        <div><dt>Clases en vivo</dt><dd>Martes de 19 a 21 hs, por Zoom</dd></div>
-        <div><dt>Presenciales</dt><dd>Dos encuentros en Buenos Aires</dd></div>
-        <div><dt>Cierre</dt><dd>Retiro en Villa de Merlo y diploma</dd></div>
-        <div><dt>Valor</dt><dd>Desde $900.000 · 9 cuotas de $130.000</dd></div>
-      </dl>
-      <div class="btns" style="margin-top:1rem">
-        <a class="btn btn-sol" href="yogaesencial/">Conocé la formación ↗</a>
-        <a class="btn btn-line" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20la%20formaci%C3%B3n%20Yoga%20Esencial%202027">Consultar por WhatsApp</a>
-      </div>
-    </div>
-    <div class="destacado-foto">
-      <img src="assets/ye-vajrasana.webp" alt="Piku Montiel sentada en vajrasana, con los ojos cerrados" width="1000" height="1500" loading="lazy">
-    </div>
-  </div>
-
-  <div class="wrap stack-lg rv" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
-    <div class="cards cards-3">
-      <div class="card">
-        <span class="card-num">01</span>
-        <h3>Un año de estudio</h3>
-        <p class="muted">Un tema por mes, de marzo a diciembre: historia y filosofía del Yoga, chakras, asanas, pranayamas, Yoga Nidra, meditación y pedagogía.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">02</span>
-        <h3>Online y a tu ritmo</h3>
-        <p class="muted">Clases en vivo los martes de 19 a 21 h por Zoom. Todas quedan grabadas, con acceso de por vida, más material de estudio y acompañamiento por WhatsApp.</p>
-      </div>
-      <div class="card">
-        <span class="card-num">03</span>
-        <h3>Diploma al completar</h3>
-        <p class="muted">Dos encuentros presenciales en Buenos Aires —hay que asistir al menos a uno— y el retiro de cierre en Villa de Merlo, donde se entregan los diplomas.</p>
-      </div>
-    </div>
-    <div class="temario">
-      <span class="temario-tit">El recorrido</span>
-      <span class="tema">Historia y filosofía</span>
-      <span class="tema">Chakras</span>
-      <span class="tema">Asanas</span>
-      <span class="tema">Pranayamas</span>
-      <span class="tema">Encuentro presencial</span>
-      <span class="tema">Yoga Nidra</span>
-      <span class="tema">Meditación</span>
-      <span class="tema">Pedagogía y proyectos</span>
-      <span class="tema">Encuentro presencial</span>
-      <span class="tema">Retiro y diplomas</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROPUESTAS ============ -->
-<section class="sec" id="propuestas">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:42ch">
-      <p class="eyebrow">Todas las propuestas</p>
-      <h2>Según dónde estés en tu camino.</h2>
-      <p class="lead muted">Cada espacio tiene su propio ritmo. Si no sabés cuál te sirve, escribime y lo vemos juntas.</p>
-    </div>
-
-    <div class="props">
-      <a class="prop" href="mentorias.html">
-        <div class="prop-foto"><img src="assets/pared-luz.webp" alt="Piku acompañando a una alumna" width="1000" height="1500" loading="lazy" style="object-position:50% 30%"></div>
-        <div class="prop-in">
-          <h3>Mentorías creativas</h3>
-          <p class="para">Para profes, terapeutas y proyectos de bienestar que necesitan ordenar sus ideas y convertirlas en una propuesta concreta.</p>
-          <span class="prop-ver">Ver la propuesta <span aria-hidden="true">→</span></span>
-          <div class="prop-pie">
-            <span class="prop-cuando">Online · uno a uno · a convenir</span>
-            <span class="prop-valor">Desde $50.000</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="prop" href="grupo-de-estudio.html">
-        <div class="prop-foto"><img src="assets/circulo-hablando.webp" alt="El grupo sentado en ronda, conversando" width="1000" height="1500" loading="lazy" style="object-position:50% 26%"></div>
-        <div class="prop-in">
-          <h3>Grupo de estudio y prácticas docentes</h3>
-          <p class="para">Para quienes ya se formaron y quieren seguir estudiando y dando clase en comunidad, sin fecha de finalización.</p>
-          <span class="prop-ver">Ver la propuesta <span aria-hidden="true">→</span></span>
-          <div class="prop-pie">
-            <span class="prop-cuando">Miércoles de 19 a 20:30 hs · Zoom</span>
-            <span class="prop-valor">$45.000 por mes</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="prop prop-otro" href="retiros.html">
-        <div class="prop-foto"><img src="assets/brazos-arriba.webp" alt="Piku con los brazos arriba durante una práctica" width="1000" height="1500" loading="lazy" style="object-position:50% 34%"></div>
-        <div class="prop-in">
-          <h3>Retiros y experiencias</h3>
-          <p class="para">Para quienes organizan retiros, viajes y encuentros de bienestar y quieren sumar una propuesta de Yoga al programa.</p>
-          <span class="prop-ver">Ver la propuesta <span aria-hidden="true">→</span></span>
-          <div class="prop-pie">
-            <span class="prop-cuando">Presencial · a medida del grupo</span>
-            <span class="prop-valor">USD 150 y 200</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="prop" href="clases-de-hatha-yoga.html">
-        <div class="prop-foto"><img src="assets/bhujangasana.webp" alt="Práctica de bhujangasana en la shala" width="1000" height="1500" loading="lazy"></div>
-        <div class="prop-in">
-          <h3>Clases de Hatha Yoga</h3>
-          <p class="para">Para quien quiere practicar todas las semanas y volver al cuerpo, sin formarse ni dar clase.</p>
-          <span class="prop-ver">Ver la propuesta <span aria-hidden="true">→</span></span>
-          <div class="prop-pie">
-            <span class="prop-cuando">Lunes y jueves de 19 a 20 hs</span>
-            <span class="prop-valor">$30.000 por mes</span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ QUIÉN SOY ============ -->
-<section class="sec" id="quien-soy" style="padding-top:0">
-  <div class="wrap duo rv">
-    <img src="assets/retrato-medita.webp" alt="Piku Montiel sentada, sonriendo" width="1000" height="1500" loading="lazy" style="aspect-ratio:4/4.2;object-position:50% 30%">
-    <div class="stack">
-      <p class="eyebrow">Quién acompaña</p>
-      <h2>Hola, soy<br>Piku Montiel.</h2>
-      <hr class="regla">
-      <p class="lead muted">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
-      <p class="muted">Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
-      <p class="muted">Dirijo la formación anual Yoga Esencial, sostengo un grupo de estudio permanente, doy clases semanales de Hatha Yoga, acompaño proyectos en mentorías individuales y llevo prácticas de Yoga a retiros y experiencias.</p>
-      <p class="eyebrow" style="color:var(--tinta-2);margin-top:.4rem">Estudio <span style="color:var(--sol-oscuro)">●</span> Práctica <span style="color:var(--sol-oscuro)">●</span> Comunidad</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============ TESTIMONIOS ============ -->
-<section class="sec" id="testimonios">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:40ch">
-      <p class="eyebrow">Testimonios</p>
-      <h2>Lo que dicen quienes estudiaron con Piku.</h2>
-    </div>
-    <div class="testis">
-      <div class="testi">
-        <p>Expansiva, nutritiva, con deseos de seguir profundizando y veo una profe auténtica, humana, y muy generosa de sus saberes.</p>
-        <span class="aut">Guadalupe G.</span>
-      </div>
-      <div class="testi">
-        <p>Después de 4 años de recibirme, me dio impulso para comenzar a dar clases. Hoy tengo dos grupas: uno de seis mujeres adultas; otro más numeroso de personas ciegas.</p>
-        <span class="aut">Vanesa E.</span>
-      </div>
-      <div class="testi">
-        <p>Haber conocido a una profesora de yoga empática, con mucha sabiduría y que sabe cómo transmitir todo su conocimiento de forma clara y precisa.</p>
-        <span class="aut">Cecilia F.</span>
-      </div>
-      <div class="testi">
-        <p>Se sintió como ir a la casa de una amiga a tomar mate para hablar de cosas de la vida misma.</p>
-        <span class="aut">Gisele G.</span>
-      </div>
-      <div class="testi">
-        <p>La calidad y calidez de los maestros traspasa las distancias y las pantallas.</p>
-        <span class="aut">María Laura Z.</span>
-      </div>
-      <div class="testi">
-        <p>Ahora puedo confiar en mí para dar las clases de yoga con dirección.</p>
-        <span class="aut">Lara T.</span>
-      </div>
-      <div class="testi">
-        <p>Los miedos que tenía antes de este curso desaparecieron. Me siento segura de mí misma.</p>
-        <span class="aut">Analía V.</span>
-      </div>
-      <div class="testi">
-        <p>La vocación con la que enseñás se siente a través de la pantalla.</p>
-        <span class="aut">Alejandra O.</span>
-      </div>
-      <div class="testi">
-        <p>Un recorrido transformador, lleno de aprendizajes que me llevo tanto a la práctica como a mi vida.</p>
-        <span class="aut">Ticiana C.</span>
-      </div>
-    </div>
-    <p class="muted" style="font-size:var(--fs-small)">Devoluciones de alumnas y alumnos de las formaciones de Piku Yoga.</p>
-  </div>
-</section>
-
-<!-- ============ CIERRE ============ -->
-<section class="sec cierre-sol">
-  <div class="wrap-narrow rv">
-    <p class="eyebrow" style="color:var(--tinta-2)">Empecemos</p>
-    <h2>¿No sabés cuál te sirve?</h2>
-    <p class="lead" style="color:var(--tinta-2);max-width:44ch">Contame en qué estás y en qué momento de tu práctica te encontrás, y vemos juntas cuál es el próximo paso.</p>
-    <div class="btns" style="margin-top:.8rem;justify-content:center">
-      <a class="btn btn-line" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20tus%20propuestas">Escribime por WhatsApp</a>
-      <a class="btn btn-ghost" href="https://www.instagram.com/piku.yoga/">Ver el Instagram</a>
-    </div>
-  </div>
-</section>
-
-<footer class="foot">
-  <div class="foot-in">
-    <div class="foot-links">
-      <a class="nav-logo" href="./" style="color:#fff"><img src="assets/logo.webp" alt="Piku Yoga" width="48" height="48"><span>Piku Yoga</span></a>
-      <p style="font-size:var(--fs-small);color:#9C9188;max-width:28ch">Práctica · Formación · Profundización · Creatividad · Comunidad</p>
-    </div>
-    <div class="foot-links">
-      <p class="foot-tit">Propuestas</p>
-      <a href="yogaesencial/">Yoga Esencial · Formación anual</a>
-      <a href="mentorias.html">Mentorías creativas</a>
-      <a href="grupo-de-estudio.html">Grupo de estudio</a>
-      <a href="retiros.html">Retiros y experiencias</a>
-      <a href="clases-de-hatha-yoga.html">Clases de Hatha Yoga</a>
-    </div>
-    <div class="foot-links">
-      <p class="foot-tit">Contacto</p>
-      <a href="https://wa.me/5491154641985">WhatsApp +54 9 11 5464-1985</a>
-      <a href="https://www.instagram.com/piku.yoga/">Instagram @piku.yoga</a>
-    </div>
-  </div>
-  <div class="foot-legal">
-    <span>© Piku Yoga · Piku Montiel</span>
-    <span>pikuyoga.com</span>
-  </div>
-</footer>
-
+<header class="top" id="top"><div class="wrap"><a class="logo" href="./" aria-label="Piku Yoga, inicio"><img src="assets/logo.webp" alt="Piku Yoga" width="66" height="66"></a>
+<nav class="nav"><a href="./#propuestas">Propuestas</a><a href="./#piku">Quién soy</a><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">Contacto</a></nav>
+<button class="burger" aria-label="Abrir el menú" aria-expanded="false"><svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 2h24M1 10h24M1 18h24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
+<nav class="menu"><a href="./#propuestas">Propuestas</a><a href="./#piku">Quién soy</a><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">Contacto</a></nav></header>
+<main>
+<section class="hero hero-home centro"><div class="wrap"><div class="chipf"><a class="chip" href="yogaesencial/">Inscripción abierta · Yoga Esencial 2027 <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></a></div>
+<div class="txt"><h1 class="tit"><svg class="orn" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#F7C51E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#1D5E6E"/></svg>Estudiar,<svg class="orn" viewBox="0 0 40 40" aria-hidden="true" style="transform:scaleX(-1)"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#1D5E6E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#F7C51E"/></svg><br>practicar y <br>enseñar Yoga.</h1><svg class="subr" viewBox="0 0 330 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9C60 4 140 3 210 4s96 2 116 3" stroke="#A98BC4" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M14 11c70-3 170-4 300-2" stroke="#A98BC4" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/></svg>
+<p class="bajada">Formaciones, prácticas y acompañamiento para profundizar en tu camino. Online, desde donde estés.</p>
+<a class="btn" href="#propuestas">Ver las propuestas <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a></div>
+<div class="foto"><img src="assets/hero-caminando.webp" alt="Piku Montiel guiando una práctica en grupo" loading="eager"></div>
+</div></section>
+<section id="propuestas"><div class="wrap">
+<div class="camino"><svg viewBox="0 0 48 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M24 4c5 5 6 13 0 22-6-9-5-17 0-22z"/><path d="M24 26c-3-7-9-11-15-11 0 7 6 11 15 11z"/><path d="M24 26c3-7 9-11 15-11 0 7-6 11-15 11z"/><path d="M24 27c-6 1-14 0-20-5 4-1 9 0 13 2"/><path d="M24 27c6 1 14 0 20-5-4-1-9 0-13 2"/></svg><h2>Según dónde estés en tu camino.</h2></div>
+<div class="props">
+<div class="destacada"><h3 class="tit"><svg class="orn" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#F7C51E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#1D5E6E"/></svg>Yoga Esencial<svg class="orn" viewBox="0 0 40 40" aria-hidden="true" style="transform:scaleX(-1)"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#1D5E6E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#F7C51E"/></svg></h3><svg class="subr" viewBox="0 0 330 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9C60 4 140 3 210 4s96 2 116 3" stroke="#A98BC4" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M14 11c70-3 170-4 300-2" stroke="#A98BC4" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/></svg>
+<p class="dato">Formación anual · 2027</p><p class="dato">Marzo a diciembre · Martes 19 a 21 hs</p><p class="precio">Desde $900.000</p>
+<div><a class="btn" href="yogaesencial/">Conocé la formación <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></a></div></div>
+<a class="prop" href="clases-de-hatha-yoga.html"><div class="n"><h3>Clases de Hatha <span class="nw">Yoga<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></span></h3><p>Lunes y jueves · 19 a 20 hs</p></div><span class="pr">$30.000<br class="m"> por mes</span></a><a class="prop" href="mentorias.html"><div class="n"><h3>Mentorías <span class="nw">creativas<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></span></h3><p>Online · uno a uno</p></div><span class="pr">Desde<br class="m"> $50.000</span></a><a class="prop" href="grupo-de-estudio.html"><div class="n"><h3>Grupo de <span class="nw">estudio<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></span></h3><p>Miércoles · 19 a 20:30 hs</p></div><span class="pr">$45.000<br class="m"> por mes</span></a><a class="prop" href="retiros.html"><div class="n"><h3>Retiros y <span class="nw">experiencias<svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></span></h3><p>Para organizadores · presencial</p></div><span class="pr">USD<br class="m"> 150 y 200</span></a>
+</div></div></section>
+<section class="piku" id="piku"><div class="wrap">
+<div class="ban"><div class="foto"><img src="assets/retrato-medita.webp" alt="Piku Montiel" style="object-position:50% 26%" loading="lazy"></div><div class="t"><h2>Hola, soy Piku Montiel.</h2><p>Estudio · Práctica · Comunidad.</p></div></div>
+<div class="bio"><p>Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
+<p>Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
+<p>Dirijo la formación anual Yoga Esencial, sostengo un grupo de estudio permanente, doy clases semanales de Hatha Yoga, acompaño proyectos en mentorías individuales y llevo prácticas de Yoga a retiros y experiencias.</p></div>
+</div></section>
+<section class="sec" id="testimonios"><div class="wrap"><h2 class="h2">Lo que dicen quienes estudiaron con Piku.</h2><div class="testi"><figure><blockquote>“Expansiva, nutritiva, con deseos de seguir profundizando y veo una profe auténtica, humana, y muy generosa de sus saberes.”</blockquote><figcaption>Guadalupe G.</figcaption></figure><figure><blockquote>“Después de 4 años de recibirme, me dio impulso para comenzar a dar clases. Hoy tengo dos grupos: uno de seis mujeres adultas; otro más numeroso de personas ciegas.”</blockquote><figcaption>Vanesa E.</figcaption></figure><figure><blockquote>“Haber conocido a una profesora de yoga empática, con mucha sabiduría y que sabe cómo transmitir todo su conocimiento de forma clara y precisa.”</blockquote><figcaption>Cecilia F.</figcaption></figure><figure><blockquote>“Se sintió como ir a la casa de una amiga a tomar mate para hablar de cosas de la vida misma.”</blockquote><figcaption>Gisele G.</figcaption></figure><figure><blockquote>“Ahora puedo confiar en mí para dar las clases de yoga con dirección.”</blockquote><figcaption>Lara T.</figcaption></figure><figure><blockquote>“Un recorrido transformador, lleno de aprendizajes que me llevo tanto a la práctica como a mi vida.”</blockquote><figcaption>Ticiana C.</figcaption></figure></div><p class="chico">Devoluciones de alumnas y alumnos de las formaciones de Piku Yoga.</p></div></section>
+<section class="cta"><div class="wrap"><h2>¿No sabés cuál te sirve?</h2><p>Contame en qué estás y en qué momento de tu práctica te encontrás, y vemos juntas cuál es el próximo paso.</p>
+<div class="acc"><a class="btn" href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20saber%20qu%C3%A9%20propuesta%20me%20sirve" target="_blank" rel="noopener">Escribime por WhatsApp <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></a><a class="btn claro" href="https://www.instagram.com/piku.yoga/" target="_blank" rel="noopener">Ver el Instagram</a></div></div></section>
+</main>
+<footer class="pie"><div class="wrap">
+<div><a href="./"><img src="assets/logo.webp" alt="Piku Yoga" width="52" height="52"></a><p class="lema">Práctica · Formación · Profundización · Creatividad · Comunidad</p></div>
+<div><h4>Propuestas</h4><ul><li><a href="yogaesencial/">Yoga Esencial · Formación anual</a></li><li><a href="clases-de-hatha-yoga.html">Clases de Hatha Yoga</a></li><li><a href="mentorias.html">Mentorías creativas</a></li><li><a href="grupo-de-estudio.html">Grupo de estudio</a></li><li><a href="retiros.html">Retiros y experiencias</a></li></ul></div>
+<div><h4>Contacto</h4><ul><li><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">WhatsApp +54 9 11 5464-1985</a></li><li><a href="https://www.instagram.com/piku.yoga/" target="_blank" rel="noopener">Instagram @piku.yoga</a></li></ul></div>
+<p class="fin">© Piku Yoga · Piku Montiel · pikuyoga.com</p></div></footer>
 <script>
-(function(){
-  var els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(e){e.classList.add('in')});
-  } else {
-    var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
-    },{rootMargin:'0px 0px -8% 0px',threshold:.05});
-    els.forEach(function(e){io.observe(e)});
-  }
-  var nav=document.getElementById('nav');
-  var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>8); };
-  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
-})();
+(function(){var t=document.getElementById('top'),b=t.querySelector('.burger');b.addEventListener('click',function(){var a=t.classList.toggle('abierto');b.setAttribute('aria-expanded',a);});t.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('abierto');});});})();
 </script>
+<script src="https://vm.semillaredes.com/web/editor.js" defer></script>
 </body>
 </html>

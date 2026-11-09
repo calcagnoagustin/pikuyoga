@@ -3,705 +3,270 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mentorías Creativas</title>
-<meta name="description" content="Acompañamiento individual online para profes de yoga, terapeutas y proyectos holísticos: ordenar tus ideas y convertirlas en una propuesta concreta.">
-<meta property="og:title" content="Mentorías Creativas">
-<meta property="og:description" content="Acompañamiento individual online para profes de yoga, terapeutas y proyectos holísticos: ordenar tus ideas y convertirlas en una propuesta concreta.">
+<title>Mentorías creativas | Piku Yoga</title>
+<meta name="description" content="Acompañamiento individual online para profes de yoga, terapeutas y proyectos holísticos: ordenar tus ideas y convertirlas en una propuesta concreta. Desde $50.000.">
+<meta property="og:title" content="Mentorías creativas | Piku Yoga">
+<meta property="og:description" content="Acompañamiento individual online para profes de yoga, terapeutas y proyectos holísticos: ordenar tus ideas y convertirlas en una propuesta concreta. Desde $50.000.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <link rel="icon" href="assets/logo.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Karla:wght@400;500;700&family=Montserrat:wght@600;700&display=swap">
-</head>
-<body>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap">
 <style>
-/* ============================================================
-   PIKU YOGA — sistema visual
-   Paleta y tipografías derivadas de la marca (logo + placas IG)
-   ============================================================ */
-
 :root{
-  /* color */
-  --papel:#FFFFFF;
-  --arena:#FBF3EC;          /* off-white cálido, sesgado al adobe de la shala */
-  --linea:#E9DCD1;
-  --tinta:#1E1A18;          /* casi negro, cálido */
-  --tinta-2:#4E443E;        /* texto secundario */
-  --coral:#EB4053;          /* placas de Instagram */
-  --coral-deep:#B32234;
-  --amarillo:#F3EC23;       /* disco del logo */
-  --barro:#563020;          /* muro de adobe */
-  --barro-2:#8A4E2E;
-
-  /* tipografía */
-  --display:'Fraunces','Playfair Display',Georgia,'Times New Roman',serif;
-  --texto:'Karla','Helvetica Neue',Helvetica,Arial,sans-serif;
-  --label:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif;
-
-  --fs-hero:clamp(2.9rem,8.4vw,5.9rem);
-  --fs-h1:clamp(2.1rem,5.2vw,3.5rem);
-  --fs-h2:clamp(1.65rem,3.4vw,2.4rem);
-  --fs-h3:clamp(1.15rem,1.6vw,1.35rem);
-  --fs-body:clamp(1rem,.35vw+.95rem,1.075rem);
-  --fs-small:.875rem;
-  --fs-label:.72rem;
-
-  /* espacio */
-  --gut:clamp(1.25rem,4vw,3rem);
-  --sec:clamp(3.75rem,9vw,7.5rem);
-  --wrap:1180px;
+  --crema:#FBF1E8;--crema-2:#F6E9DD;--blanco:#FFFAF5;--tinta:#13304A;--tinta-2:#3E5266;
+  --teal:#1D5E6E;--teal-2:#164B58;--lila:#A98BC4;--lila-claro:#F0E2EE;--celeste:#DDE8EE;--pill:#D5E5EC;
+  --amarillo:#F7D21E;--linea:#E9DCCF;
+  --f:'Nunito','Helvetica Neue',Arial,sans-serif;
+  --wrap:1120px;--gut:20px;--r:22px;
 }
-
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-
-body{
-  margin:0;
-  background:var(--papel);
-  color:var(--tinta);
-  font-family:var(--texto);
-  font-size:var(--fs-body);
-  line-height:1.72;
-  -webkit-font-smoothing:antialiased;
-}
-
-img{max-width:100%;height:auto;display:block}
-
-h1,h2,h3,h4{
-  font-family:var(--display);
-  font-variation-settings:'SOFT' 60,'WONK' 1;
-  font-weight:600;
-  line-height:1.03;
-  letter-spacing:-.015em;
-  text-wrap:balance;
-  margin:0;
-}
-h1{font-size:var(--fs-h1)}
-h2{font-size:var(--fs-h2)}
-h3{font-size:var(--fs-h3);line-height:1.25;letter-spacing:0}
-p{margin:0}
-
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--f);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(251,241,232,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--linea)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo img{width:54px;height:54px;border-radius:50%}
+.nav{display:none;gap:36px}
+.nav a{text-decoration:none;font-weight:600;font-size:17px}
+.nav a:hover{color:var(--teal)}
+.burger{width:44px;height:44px;border:0;background:none;display:grid;place-items:center;cursor:pointer;color:var(--tinta)}
+.menu{display:none;border-top:1px solid var(--linea);padding:6px var(--gut) 14px}
+.menu a{display:block;padding:11px 0;text-decoration:none;font-weight:700;font-size:18px;border-bottom:1px solid var(--linea)}
+.menu a:last-child{border-bottom:0}
+.top.abierto .menu{display:block}
+/* piezas */
+.chip svg,.prop svg{width:14px;height:14px;flex:0 0 14px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--celeste);color:var(--tinta);border-radius:99px;padding:6px 16px;font-weight:800;font-size:14px;text-decoration:none}
+.eti{display:inline-block;background:var(--celeste);color:var(--tinta);border-radius:99px;padding:5px 16px;font-weight:800;font-size:12.5px;letter-spacing:2.2px;text-transform:uppercase}
+.tit{font-weight:800;line-height:1.02;letter-spacing:-.5px;margin:0;font-size:clamp(38px,10vw,64px)}
+.tit .orn{display:inline-block;width:.5em;height:.5em;vertical-align:.1em;margin:0 .12em}
+.subr{display:block;width:min(100%,330px);height:14px;margin:6px auto 0}
+.bajada{font-size:17px;color:var(--tinta-2);margin:14px auto 0;max-width:30em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--teal);color:#fff;text-decoration:none;font-weight:700;font-size:18px;border-radius:99px;padding:12px 30px;min-height:48px;box-shadow:0 3px 0 var(--teal-2)}
+.btn:hover{background:var(--teal-2)}
+.btn svg{width:16px;height:16px;flex:0 0 16px}
+.nota{font-size:15px;color:var(--tinta-2);margin-top:12px}
+.foto{border-radius:var(--r);overflow:hidden;background:var(--crema-2)}
+.foto img{width:100%;height:100%;object-fit:cover}
+/* hero */
+.hero{padding:22px 0 30px;text-align:center}
+.hero .wrap{display:grid;gap:22px;align-items:center}
+.hero .txt{display:flex;flex-direction:column;align-items:center}
+.hero .txt>.eti,.hero .txt>.chip{margin-bottom:14px}
+.hero .btn{margin-top:20px}
+.hero .foto{aspect-ratio:4/3}
+.chipf{text-align:center}
+.hero-home .wrap{gap:16px}
+/* banda */
+.banda{background:var(--celeste)}
+.banda .wrap{display:flex;flex-direction:column;gap:6px;padding-top:14px;padding-bottom:14px}
+.banda .it{display:flex;align-items:center;justify-content:center;gap:14px;font-weight:700;font-size:16px;text-align:center}
+.banda .it::before,.banda .it::after{content:"";width:46px;height:1.5px;background:var(--teal);flex:0 0 46px;opacity:.7}
+.banda .loto{display:flex;justify-content:center}
+.banda .loto svg{width:30px;height:22px;color:var(--teal)}
+.banda .grande{font-size:21px}
+/* secciones */
+.sec{padding:30px 0}
+.h2{display:flex;align-items:flex-start;gap:12px;font-weight:800;font-size:clamp(25px,6.4vw,44px);line-height:1.08;margin:0 0 18px;letter-spacing:-.3px}
+.h2::before{content:"";width:4px;align-self:stretch;min-height:1em;background:var(--lila);border-radius:2px;flex:0 0 4px}
+.lista{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lista li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.35}
+.lista li::before{content:"";flex:0 0 3px;height:1.2em;margin-top:.08em;background:var(--lila);border-radius:2px}
+.lista.guion li::before{flex:0 0 22px;height:2px;margin-top:.68em}
+.pastilla{display:inline-block;background:var(--lila-claro);border-radius:99px;padding:9px 22px;font-weight:600;font-size:16px;text-align:center}
+.pastilla.azul{background:var(--pill)}
+.linea-txt{display:flex;align-items:center;gap:14px;justify-content:center;text-align:center;font-size:15px;color:var(--tinta-2);margin:20px 0 0}
+.linea-txt::before,.linea-txt::after{content:"";flex:1;max-width:160px;height:1.5px;background:var(--teal);opacity:.55}
+.linea-txt.lila::before,.linea-txt.lila::after{background:var(--lila)}
+.temas{text-align:center;font-size:17px;margin-top:10px}
+/* home: propuestas */
+.camino{text-align:center;padding:24px 0 8px}
+.camino svg{width:40px;height:30px;color:var(--teal);display:block;margin:0 auto 2px}
+.camino h2{display:flex;align-items:center;justify-content:center;gap:14px;margin:0;font-weight:800;font-size:clamp(18px,5vw,34px)}
+.camino h2::before,.camino h2::after{content:"";flex:1;max-width:130px;height:1.5px;background:var(--tinta);opacity:.8}
+.props{display:grid;gap:12px;padding:16px 0 30px}
+.destacada{background:var(--lila-claro);border-radius:var(--r);padding:20px 18px 22px;text-align:center}
+.destacada .tit{font-size:clamp(30px,8vw,44px);white-space:nowrap}
+.destacada .subr{width:min(100%,260px)}
+.destacada .dato{margin:0;padding:9px 0;border-bottom:1.5px solid rgba(19,48,74,.18);font-size:16px}
+.destacada .dato:first-of-type{padding-top:6px}
+.destacada .precio{font-weight:800;font-size:20px;padding:10px 0 12px;margin:0}
+.destacada .btn{font-size:17px;padding:10px 24px;min-height:44px}
+.prop{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:13px 14px 13px 0;text-decoration:none}
+.prop .n{border-left:4px solid var(--lila);padding-left:14px;margin-left:12px}
+.prop h3{margin:0;font-weight:800;font-size:16.5px;line-height:1.15}
+.nw{white-space:nowrap}
+.prop h3 svg{width:13px;height:13px;margin-left:4px;vertical-align:.05em}
+.prop p{margin:3px 0 0;font-size:13.5px;color:var(--tinta-2)}
+.prop .pr{background:var(--pill);border-radius:99px;padding:6px 14px;font-weight:800;font-size:13.5px;text-align:center;line-height:1.15;white-space:nowrap}
+.prop:hover{border-color:var(--lila)}
+/* banner Piku */
+.piku{padding:10px 0 30px}
+.piku .ban{display:grid;grid-template-columns:42% 1fr;align-items:center;background:var(--crema-2);border-radius:var(--r);overflow:hidden;min-height:150px}
+.piku .ban .foto{border-radius:0;height:100%;position:relative;min-height:150px;-webkit-mask-image:linear-gradient(to right,#000 60%,transparent);mask-image:linear-gradient(to right,#000 60%,transparent)}
+.piku .ban .foto img{position:absolute;inset:0}
+.piku .ban .t{border-left:4px solid var(--lila);margin:16px 16px 16px 4px;padding-left:14px}
+.piku .ban h2{margin:0;font-weight:800;font-size:clamp(22px,5.6vw,46px);line-height:1.05}
+.piku .ban p{margin:6px 0 0;font-size:clamp(14px,3.6vw,24px);color:var(--tinta-2)}
+.bio{max-width:44em;margin:22px auto 0;display:grid;gap:12px;font-size:17px;color:var(--tinta-2)}
+.bio p{margin:0}
+/* testimonios */
+.testi{display:grid;gap:12px}
+.testi figure{margin:0;background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:18px 18px 16px}
+.testi blockquote{margin:0;font-size:16px;line-height:1.45}
+.testi figcaption{margin-top:10px;font-weight:800;font-size:14px;color:var(--teal)}
+.testi figure:nth-child(n+4){display:none}
+.chico{font-size:14px;color:var(--tinta-2);text-align:center;margin-top:14px}
+/* cta final */
+.cta{background:var(--lila-claro);text-align:center;padding:36px 0}
+.cta h2{margin:0;font-weight:800;font-size:clamp(28px,7vw,44px);line-height:1.05}
+.cta p{max-width:30em;margin:10px auto 0;color:var(--tinta-2)}
+.cta .acc{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px}
+.btn.claro{background:transparent;color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
+.btn.claro:hover{background:var(--teal);color:#fff}
+/* footer */
+.pie{background:var(--tinta);color:#E8EEF2;padding:34px 0 26px;font-size:15px}
+.pie .wrap{display:grid;gap:24px}
+.pie img{width:52px;height:52px;border-radius:50%}
+.pie h4{margin:0 0 8px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9FB7C6}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pie a{text-decoration:none}
+.pie a:hover{text-decoration:underline}
+.pie .lema{margin:10px 0 0;color:#B9C9D3}
+.pie .fin{border-top:1px solid rgba(255,255,255,.15);padding-top:16px;color:#9FB7C6;font-size:13px}
+/* tarjetas retiros */
+.exps{display:grid;gap:16px}
+.exp{display:grid;grid-template-columns:44% 1fr;gap:14px;align-items:center;text-decoration:none}
+.exp .foto{aspect-ratio:4/3}
+.exp .n{border-left:4px solid var(--lila);padding-left:12px}
+.exp h3{margin:0;font-weight:800;font-size:19px;line-height:1.15}
+.exp p{margin:3px 0 8px;font-size:15px;color:var(--tinta-2)}
+.exp .pr{white-space:nowrap;display:inline-block;background:var(--pill);border-radius:99px;padding:5px 16px;font-weight:800;font-size:16px}
+/* bloques de 2 o 3 columnas */
+.cols3{display:grid;gap:10px}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:12px}.par .foto{aspect-ratio:4/5}
+.lado{display:grid;gap:18px}
+.lado>.foto{aspect-ratio:4/3}
+.tit.g{font-size:clamp(28px,7.4vw,54px)}
+.cols3>div h3{margin:0;font-weight:800;font-size:19px}
+.cols3>div p{margin:2px 0 0;font-size:15px;color:var(--tinta-2)}
+.precios{display:grid;gap:8px;margin-top:16px}
+.precios .p{background:var(--celeste);border-radius:14px;padding:9px 14px;text-align:center;font-size:16px}
+.precios .p b{font-size:22px;font-weight:800;margin-left:4px}
+.pills{display:grid;gap:8px;margin-top:18px}
+/* plan de estudio */
+.plan{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.plan li{display:grid;grid-template-columns:112px 1fr;gap:12px;align-items:baseline;background:var(--blanco);border:1.5px solid var(--linea);border-radius:14px;padding:11px 14px}
+.plan li span{font-weight:800;color:var(--teal);font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.plan li.pres{background:var(--celeste);border-color:var(--celeste)}
+.duo{display:grid;gap:12px}
+.caja{background:var(--blanco);border:1.5px solid var(--linea);border-radius:18px;padding:18px}
+.caja h3{margin:0 0 6px;font-weight:800;font-size:19px}
+.caja p{margin:4px 0 0;color:var(--tinta-2);font-size:16px}
+.caja .k{font-weight:800;color:var(--teal);font-size:13px;letter-spacing:2px;text-transform:uppercase}
 
-/* ---------- estructura ---------- */
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
-.wrap-narrow{max-width:760px;margin-inline:auto;padding-inline:var(--gut)}
-.col{max-width:63ch}
-.sec{padding-block:var(--sec)}
-.stack{display:flex;flex-direction:column;gap:1.15rem}
-.stack-lg{display:flex;flex-direction:column;gap:2.25rem}
-
-.band-arena{background:var(--arena)}
-.band-coral{background:var(--coral);color:#fff}
-.band-barro{background:var(--barro);color:#F6EDE6}
-.band-coral h1,.band-coral h2,.band-coral h3,.band-barro h1,.band-barro h2,.band-barro h3{color:inherit}
-
-/* ---------- micro-tipografía ---------- */
-.eyebrow{
-  font-family:var(--label);font-weight:600;font-size:var(--fs-label);
-  letter-spacing:.19em;text-transform:uppercase;color:var(--coral);
-  margin:0;
-}
-.band-coral .eyebrow{color:#FFE3E7}
-.band-barro .eyebrow{color:var(--amarillo)}
-.lead{font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.62;color:var(--tinta-2)}
-.band-coral .lead,.band-barro .lead{color:inherit;opacity:.92}
-.muted{color:var(--tinta-2)}
-.dato{font-family:var(--label);font-weight:600;font-size:var(--fs-small);letter-spacing:.06em}
-
-/* ---------- botones ---------- */
-.btns{display:flex;flex-wrap:wrap;gap:.75rem}
-.btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:var(--label);font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:1.05em 1.7em;border:2px solid transparent;border-radius:999px;
-  text-decoration:none;cursor:pointer;
-  transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-coral{background:var(--coral);color:#fff}
-.btn-coral:hover{background:var(--coral-deep)}
-.btn-tinta{background:var(--tinta);color:#fff}
-.btn-tinta:hover{background:#000}
-.btn-line{border-color:currentColor}
-.btn-line:hover{background:var(--tinta);color:#fff;border-color:var(--tinta)}
-.band-coral .btn-line:hover{background:#fff;color:var(--coral);border-color:#fff}
-.band-barro .btn-line:hover{background:var(--amarillo);color:var(--tinta);border-color:var(--amarillo)}
-.btn-amarillo{background:var(--amarillo);color:var(--tinta)}
-.btn-amarillo:hover{background:#E3DC10}
-@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
-
-/* ---------- sello (el disco amarillo del logo, reutilizado) ---------- */
-.sello{
-  position:absolute;top:-1.4rem;right:-1rem;
-  display:grid;place-content:center;text-align:center;
-  width:8.6rem;height:8.6rem;border-radius:50%;
-  background:var(--amarillo);color:var(--tinta);
-  font-family:var(--label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  font-size:.7rem;line-height:1.5;
-  transform:rotate(-9deg);
-}
-/* el sello está rotado: su caja visual es ~8px más ancha que el círculo,
-   así que en mobile se apoya hacia adentro para no desbordar la ventana */
-@media (max-width:520px){.sello{width:7rem;height:7rem;top:-1.1rem;right:.5rem;font-size:.62rem}}
-.sello b{display:block;font-family:var(--display);font-size:1.5rem;letter-spacing:-.01em;
-  text-transform:none;font-variation-settings:'SOFT' 60,'WONK' 1}
-.num{
-  display:grid;place-content:center;flex:none;
-  width:3rem;height:3rem;border-radius:50%;
-  background:var(--amarillo);color:var(--tinta);
-  font-family:var(--display);font-size:1.35rem;font-weight:600;
-  font-variation-settings:'SOFT' 60,'WONK' 1;
-}
-
-/* ---------- nav ---------- */
-.nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.94);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--linea);
-}
-.nav-in{max-width:var(--wrap);margin-inline:auto;padding:.7rem var(--gut);
-  display:flex;align-items:center;gap:1rem;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
-.nav-logo img{width:44px;height:44px}
-.nav-logo span{font-family:var(--label);font-weight:700;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
-.nav-links{display:none;gap:1.6rem;align-items:center}
-.nav-links a{font-family:var(--label);font-weight:600;font-size:.72rem;letter-spacing:.12em;
-  text-transform:uppercase;text-decoration:none;color:var(--tinta-2)}
-.nav-links a:hover{color:var(--coral)}
-.nav .btn{padding:.8em 1.3em;font-size:.72rem}
-@media (min-width:900px){.nav-links{display:flex}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;background:var(--tinta);color:#fff;overflow:hidden}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%;opacity:.55}
-.hero-in{position:relative;max-width:var(--wrap);margin-inline:auto;padding:clamp(4.5rem,13vw,9rem) var(--gut) clamp(3.5rem,8vw,6rem)}
-.hero h1{font-size:var(--fs-hero);letter-spacing:-.025em}
-.hero .lead{color:#F3E9E2;max-width:34ch}
-.hero::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(20,14,11,.55) 0%,rgba(20,14,11,.15) 45%,rgba(20,14,11,.82) 100%)}
-.hero-in{z-index:2}
-
-/* ---------- meta / fichas ---------- */
-.meta{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{
-  font-family:var(--label);font-weight:600;font-size:.7rem;letter-spacing:.11em;text-transform:uppercase;
-  padding:.55em 1em;border-radius:999px;border:1px solid currentColor;opacity:.95;
-}
-.chip-solid{background:var(--amarillo);color:var(--tinta);border-color:var(--amarillo)}
-
-/* ---------- módulos ---------- */
-.modulo{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center;padding-block:clamp(2.5rem,5vw,4rem)}
-.modulo + .modulo{border-top:1px solid var(--linea)}
-.modulo-head{display:flex;gap:1rem;align-items:flex-start}
-.modulo-head .num{margin-top:.1em}
-.modulo h3{font-size:var(--fs-h2);line-height:1.05;letter-spacing:-.015em}
-.modulo figure{margin:0;position:relative;display:flex}
-.modulo figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
 @media (min-width:860px){
-  .modulo{grid-template-columns:1fr 1fr;align-items:stretch}
-  .modulo .m-txt{align-self:center}
-  .modulo.flip figure{order:2}
-  .modulo figure{position:relative;min-height:clamp(380px,34vw,540px)}
-  .modulo figure img{position:absolute;inset:0;height:100%;aspect-ratio:auto}
+  :root{--gut:32px}
+  body{font-size:18px}
+  .nav{display:flex}.burger,.menu{display:none!important}
+  .top .wrap{height:80px}.logo img{width:66px;height:66px}
+  .hero{padding:34px 0 40px;text-align:left}
+  .hero .wrap{grid-template-columns:1fr 1.2fr;gap:44px}
+  .hero.inv .wrap{grid-template-columns:1fr 1.05fr}
+  .hero.inv .foto{order:-1}
+  .hero .txt{align-items:flex-start}
+  .hero.centro .txt{align-items:center;text-align:center}
+  .chipf{grid-column:1/-1;margin-bottom:-14px}
+  .hero .bajada{margin-left:0;font-size:20px}
+  .hero.centro .bajada{margin:14px auto 0}
+  .hero .subr{margin-left:0}
+  .hero.centro .subr{margin:6px auto 0}
+  .hero .foto{aspect-ratio:auto;height:420px}
+  .hero.bleed{padding:0}
+  .hero.bleed .wrap{max-width:none;padding:0;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:0}
+  .hero.bleed .txt{padding:40px 24px 40px max(32px,calc((100vw - var(--wrap))/2 + 32px))}
+  .hero.bleed .foto{border-radius:0;height:520px;-webkit-mask-image:linear-gradient(to right,transparent,#000 22%);mask-image:linear-gradient(to right,transparent,#000 22%)}
+  .tit{font-size:clamp(52px,5.2vw,66px)}
+  .hero-home .tit{font-size:clamp(52px,5vw,62px);white-space:nowrap}
+  .banda .wrap{flex-direction:row;justify-content:center;align-items:center;gap:26px;padding-top:18px;padding-bottom:18px}
+  .banda .it{font-size:20px}
+  .banda .it::before,.banda .it::after{display:none}
+  .banda .wrap::before,.banda .wrap::after{content:"";width:70px;height:1.5px;background:var(--teal);opacity:.7}
+  .banda .sep{width:1.5px;height:26px;background:var(--lila)}
+  .banda .loto svg{width:46px;height:32px}
+  .banda .grande{font-size:26px}
+  .sec{padding:44px 0}
+  .lista{gap:14px}.lista li{font-size:21px}
+  .tit.g{font-size:54px;white-space:nowrap}
+  .lado{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .lado.ancho{grid-template-columns:1.25fr 1fr}
+  .lado.angosto{grid-template-columns:.8fr 1.6fr}
+  .lado>.foto{aspect-ratio:auto;height:100%;min-height:300px}
+  .props{grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+  .destacada{grid-row:1/3;padding:26px 32px;display:flex;flex-direction:column;justify-content:center}
+  .prop{grid-template-columns:1fr;align-content:start;padding:18px 18px 18px 0;gap:10px}
+  .prop h3{font-size:24px;min-height:2.3em}.prop p{font-size:16px}
+  br.m{display:none}
+  .prop .pr{justify-self:start;margin-left:30px;font-size:16px;padding:7px 22px}
+  .piku .ban{grid-template-columns:44% 1fr;min-height:230px}
+  .piku .ban .t{margin:24px 24px 24px 8px;padding-left:22px}
+  .testi{grid-template-columns:repeat(3,1fr)}
+  .testi figure:nth-child(n+4){display:block}
+  .exps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .exp{grid-template-columns:1fr;gap:12px;align-items:start}
+  .exp .row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+  .exp p{margin-bottom:0}
+  .cols3{grid-template-columns:repeat(3,1fr);gap:0}
+  .cols3>div{padding:0 22px;border-left:1.5px solid var(--lila)}
+  .cols3>div:first-child{border-left:0;padding-left:0}
+  .cols3.centro>div{text-align:center}
+  .precios{grid-template-columns:repeat(3,1fr);gap:12px}
+  .precios .p{padding:12px}
+  .precios .p b{display:block;font-size:30px;margin:0}
+  .pills{grid-template-columns:auto auto;justify-content:start;gap:14px}
+  .duo{grid-template-columns:1fr 1fr}
+  .pie .wrap{grid-template-columns:1.4fr 1fr 1fr}
+  .pie .fin{grid-column:1/-1}
 }
-
-/* ---------- listas ---------- */
-.lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem}
-.lista li{position:relative;padding-left:1.6rem}
-.lista li::before{content:'';position:absolute;left:0;top:.72em;width:.5rem;height:.5rem;
-  border-radius:50%;background:var(--coral)}
-.band-barro .lista li::before,.band-coral .lista li::before{background:var(--amarillo)}
-.lista-guion li::before{width:.85rem;height:2px;border-radius:0;top:.85em}
-
-/* ---------- tarjetas de precio ---------- */
-.precios{display:grid;gap:1.25rem}
-@media (min-width:820px){.precios{grid-template-columns:1.15fr 1fr}}
-.precio{
-  border:1px solid var(--linea);background:var(--papel);
-  padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1rem;position:relative;
-}
-.precio-destacado{border:2px solid var(--tinta)}
-.plata{font-family:var(--display);font-size:clamp(2rem,4.2vw,2.9rem);font-weight:600;
-  font-variation-settings:'SOFT' 60,'WONK' 1;line-height:1;letter-spacing:-.02em;margin:0}
-.card .plata{font-size:clamp(1.8rem,3vw,2.3rem)}
-.plata small{font-family:var(--label);font-size:.72rem;font-weight:600;letter-spacing:.12em;
-  text-transform:uppercase;display:block;margin-top:.6rem;color:var(--tinta-2)}
-.sueltos{display:grid;gap:.75rem}
-.suelto{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
-  padding-block:.85rem;border-bottom:1px solid var(--linea)}
-.suelto:last-child{border-bottom:0}
-.suelto a{text-decoration:none;font-weight:500}
-.suelto a:hover{color:var(--coral)}
-.suelto .plata-min{font-family:var(--display);font-size:1.3rem;font-weight:600;white-space:nowrap;
-  font-variation-settings:'SOFT' 60,'WONK' 1}
-
-/* ---------- grid de tarjetas ---------- */
-.cards{display:grid;gap:1.25rem}
-@media (min-width:760px){.cards-3{grid-template-columns:repeat(3,1fr)}.cards-2{grid-template-columns:repeat(2,1fr)}}
-.card{background:var(--papel);border:1px solid var(--linea);padding:clamp(1.5rem,3vw,2.1rem);
-  display:flex;flex-direction:column;gap:.9rem}
-.band-barro .card{background:rgba(255,255,255,.06);border-color:rgba(246,237,230,.22)}
-
-/* ---------- bio ---------- */
-.bio{display:grid;gap:clamp(1.75rem,4vw,3.5rem);align-items:center}
-.bio img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
-@media (min-width:860px){.bio{grid-template-columns:.85fr 1fr}}
-
-/* ---------- FAQ ---------- */
-.faq{border-top:1px solid var(--linea)}
-.faq details{border-bottom:1px solid var(--linea)}
-.faq summary{
-  cursor:pointer;list-style:none;padding:1.25rem 2.5rem 1.25rem 0;position:relative;
-  font-family:var(--display);font-size:1.1rem;font-weight:600;line-height:1.35;
-  font-variation-settings:'SOFT' 60,'WONK' 1;
-}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:'+';position:absolute;right:.25rem;top:1.05rem;
-  font-family:var(--texto);font-size:1.5rem;color:var(--coral);transition:transform .2s ease}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq .faq-body{padding-bottom:1.4rem;color:var(--tinta-2);max-width:60ch}
-
-/* ---------- cita ---------- */
-.cita{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.22;
-  font-variation-settings:'SOFT' 60,'WONK' 1;font-weight:500;letter-spacing:-.015em;text-wrap:balance}
-
-/* ---------- galería ---------- */
-.tira{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}
-@media (min-width:760px){.tira{grid-template-columns:repeat(4,1fr)}}
-.tira img{width:100%;aspect-ratio:4/5;object-fit:cover}
-
-/* ---------- footer ---------- */
-.foot{background:var(--tinta);color:#EFE6E0;padding-block:clamp(3rem,6vw,4.5rem)}
-.foot-in{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);
-  display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start}
-.foot a{color:#EFE6E0}
-.foot .nav-links{display:flex;flex-direction:column;gap:.7rem;align-items:flex-start}
-.foot .nav-links a{color:#C8BAB2}
-.foot .nav-links a:hover{color:var(--amarillo)}
-.foot-legal{border-top:1px solid rgba(239,230,224,.16);margin-top:2.5rem;padding-top:1.5rem;
-  font-size:.78rem;color:#9C8D86}
-
-/* ---------- reveal ---------- */
-.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-/* ============================================================
-   HERO v2 — franja de datos con iconos + panel de CTA
-   ============================================================ */
-
-.hero-v2{padding-bottom:0}
-.hero-v2 .hero-img{object-position:50% 38%;opacity:1}
-/* degradé pesado del lado del texto, liviano sobre la cara */
-.hero-v2::after{
-  background:
-    linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.68) 32%,
-                          rgba(18,12,10,.16) 56%,rgba(18,12,10,.32) 100%),
-    linear-gradient(180deg,rgba(18,12,10,.36) 0%,rgba(18,12,10,0) 24%);
-}
-.hero-v2 > *:not(picture):not(.hero-img){position:relative;z-index:2}
-.hero-v2 picture{display:contents}
-.hero-v2 .hero-in{padding-bottom:clamp(2rem,4vw,3rem)}
-.hero-v2 h1{letter-spacing:-.03em}
-.hero-rule{display:block;width:4.5rem;height:4px;background:var(--amarillo);
-  margin:clamp(1rem,2vw,1.5rem) 0;border-radius:2px}
-.hero-v2 .lead{max-width:38ch}
-
-/* ---------- franja de datos ---------- */
-.hero-datos{
-  max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut);
-  display:grid;gap:0;
-}
-.dato-item{display:flex;align-items:center;gap:.9rem;padding-block:1rem}
-.dato-ico{
-  flex:none;display:grid;place-content:center;width:2.9rem;height:2.9rem;border-radius:50%;
-  background:rgba(22,15,12,.62);color:var(--amarillo);
-  box-shadow:inset 0 0 0 1px rgba(243,236,35,.32);
-}
-.dato-ico svg{width:1.35rem;height:1.35rem;display:block}
-.dato-txt{font-family:var(--label);font-weight:600;font-size:.74rem;
-  letter-spacing:.11em;text-transform:uppercase;line-height:1.5;opacity:.85}
-.dato-txt b{display:block;font-weight:700;opacity:1;letter-spacing:.08em}
-
-@media (min-width:900px){
-  .hero-datos{grid-template-columns:repeat(4,1fr);padding-bottom:clamp(2rem,4vw,3rem)}
-  .dato-item{padding-inline:1.75rem;padding-block:0}
-  .dato-item:first-child{padding-left:0}
-  .dato-item + .dato-item{border-left:1px solid rgba(255,255,255,.22)}
-}
-/* en mobile la franja baja al papel: fondo crema y acentos coral */
-@media (max-width:899px){
-  /* en pantalla angosta el degradé lateral tapa a Piku: pasa a scrim vertical */
-  /* la foto ocupa una banda de alto definido (no todo el hero): así
-     object-position encuadra de verdad y el titular se apoya abajo */
-  .hero-v2{--heroH:clamp(33rem,148vw,40rem)}
-  .hero-v2 .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 20%}
-  .hero-v2::after{inset:0 0 auto 0;height:var(--heroH)}
-  .hero-v2 .hero-in{min-height:var(--heroH);display:flex;flex-direction:column;
-    justify-content:flex-end;padding-top:2.5rem}
-  .hero::after{background:linear-gradient(180deg,rgba(18,12,10,.58) 0%,
-     rgba(18,12,10,.34) 38%,rgba(18,12,10,.80) 100%)}
-  .hero-datos{background:var(--arena);color:var(--tinta);
-    border-radius:20px 20px 0 0;margin-top:-1.5rem;
-    padding-top:.5rem}
-  .dato-ico{background:rgba(235,64,83,.12);color:var(--coral)}
-  .dato-item + .dato-item{border-top:1px solid var(--linea)}
-  .dato-txt{opacity:1;color:var(--tinta-2)}
-  .dato-txt b{color:var(--tinta)}
-}
-
-/* ---------- panel de CTA ---------- */
-.hero-panel{
-  background:var(--arena);color:var(--tinta);
-  max-width:calc(var(--wrap) - 2*var(--gut));margin-inline:auto;
-  border-radius:20px 20px 0 0;
-  padding:clamp(1.6rem,3.5vw,2.4rem) clamp(1.4rem,3.5vw,2.75rem) clamp(1.75rem,4vw,2.75rem);
-  display:grid;gap:clamp(1.4rem,3vw,1.9rem);
-}
-@media (max-width:899px){
-  .hero-panel{max-width:none;border-radius:0;padding-inline:var(--gut)}
-}
-.hero-panel .btns{gap:.85rem}
-.hero-panel .btn{padding:1.15em 2rem;font-size:.8rem}
-@media (max-width:520px){.hero-panel .btn{width:100%;justify-content:center}}
-
-.panel-extras{display:grid;gap:1.15rem;padding-top:clamp(1.2rem,3vw,1.6rem);
-  border-top:1px solid var(--linea)}
-@media (min-width:700px){
-  .panel-extras{grid-template-columns:1fr 1fr;gap:2.25rem}
-  .panel-extras > .extra + .extra{border-left:1px solid var(--linea);padding-left:2.25rem}
-}
-.extra{display:flex;gap:.9rem;align-items:flex-start}
-.extra svg{width:1.7rem;height:1.7rem;flex:none;color:var(--coral);margin-top:.1rem}
-.extra b{display:block;font-family:var(--label);font-weight:600;font-size:.74rem;
-  letter-spacing:.11em;text-transform:uppercase}
-.extra p{font-size:var(--fs-small);color:var(--tinta-2);margin-top:.25rem;line-height:1.55}
-
-/* ---------- hero de Mentorías: figura completa, sin cortar la cabeza ----------
-   La foto es vertical y la figura de Piku ocupa del 20% al 62% del alto.
-   Con un hero bajo, el "cover" le comía la cabeza: se le da altura y se
-   reencuadra para que entre entera. */
-.hero-mentorias .hero-in{min-height:clamp(30rem,64vw,60rem);display:flex;
-  flex-direction:column;justify-content:center}
-.hero-mentorias .hero-img{object-position:50% 27%;opacity:.9}
-.hero-mentorias::after{
-  background:
-    linear-gradient(96deg,rgba(18,12,10,.90) 0%,rgba(18,12,10,.70) 34%,
-                          rgba(18,12,10,.22) 60%,rgba(18,12,10,.38) 100%),
-    linear-gradient(180deg,rgba(18,12,10,.40) 0%,rgba(18,12,10,0) 28%);
-}
-.hero-mentorias picture{display:contents}
-@media (max-width:899px){
-  /* la foto ocupa una banda arriba y el texto se apoya debajo, sobre el fondo
-     oscuro: así la figura entra entera y el titular no le pisa la cabeza */
-  .hero-mentorias{--heroH:clamp(26rem,96vw,34rem)}
-  .hero-mentorias .hero-img{inset:0 0 auto 0;height:var(--heroH);object-position:50% 30%}
-  .hero-mentorias::after{inset:0 0 auto 0;height:var(--heroH);
-    background:linear-gradient(180deg,rgba(18,12,10,.30) 0%,rgba(18,12,10,.05) 30%,
-      rgba(18,12,10,.55) 78%,rgba(30,26,24,1) 100%)}
-  .hero-mentorias .hero-in{padding-top:calc(var(--heroH) - 2rem)}
-}
-
-
-/* --- testimonios --- */
-.testis{display:grid;gap:clamp(.9rem,2vw,1.3rem);grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:999px){.testis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:699px){.testis{grid-template-columns:1fr}}
-.testi{background:var(--papel);border:1px solid var(--linea);border-radius:14px;
-  padding:clamp(1.2rem,2.4vw,1.6rem);display:grid;gap:.75rem;align-content:start}
-.testi::before{content:"\201C";font-family:var(--display);font-weight:600;font-size:2.6rem;
-  line-height:.5;color:var(--coral);height:1.1rem}
-.testi p{font-size:var(--fs-body);color:var(--tinta-2);line-height:1.6}
-.testi .aut{font-family:var(--label);font-weight:700;font-size:var(--fs-label);letter-spacing:.14em;
-  text-transform:uppercase;color:var(--tinta-2);margin-top:auto}
-.band-arena .testi{background:var(--papel)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-
-<nav class="nav" data-b="1">
-  <div class="nav-in">
-    <a class="nav-logo" href="index.html">
-      <img src="assets/logo.webp" alt="Piku Yoga" width="44" height="44" data-e="1">
-      <span data-e="2">Piku Yoga</span>
-    </a>
-    <div class="nav-links">
-      <a href="#que-es" data-e="3">Qué es</a>
-      <a href="#trabajamos" data-e="4">Sobre qué trabajamos</a>
-      <a href="#como" data-e="5">Cómo funciona</a>
-      <a href="#valores" data-e="6">Valores</a>
-    </div>
-    <a class="btn btn-coral" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20las%20mentor%C3%ADas" data-e="7">Quiero una mentoría</a>
-  </div>
-</nav>
-
-<header class="hero hero-mentorias" data-b="2">
-  <picture>
-    <source media="(max-width:899px)" srcset="assets/pared-luz-vert.webp">
-    <img class="hero-img" src="assets/pared-luz.webp" alt="Piku acompañando a una alumna" width="1000" height="1500" data-e="8">
-  </picture>
-  <div class="hero-in stack">
-    <p class="eyebrow" style="color:var(--amarillo)" data-e="9">Piku Yoga · Acompañamiento individual</p>
-    <h1 data-e="10">Mentorías<br>creativas</h1>
-    <p class="lead" data-e="11">Un espacio individual para ordenar tus ideas y transformar aquello que imaginás en una propuesta concreta.</p>
-    <div class="meta" style="margin-top:.5rem">
-      <span class="chip" data-e="12">Online</span>
-      <span class="chip" data-e="13">Uno a uno</span>
-      <span class="chip" data-e="14">Días y horarios a convenir</span>
-      <span class="chip chip-solid" data-e="15">Desde $50.000</span>
-    </div>
-    <div class="btns" style="margin-top:1rem">
-      <a class="btn btn-amarillo" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20las%20mentor%C3%ADas" data-e="16">Quiero una mentoría</a>
-      <a class="btn btn-line" href="#trabajamos" style="color:#fff" data-e="17">Sobre qué trabajamos</a>
-    </div>
-  </div>
-</header>
-
-<section class="sec" id="que-es" data-b="3">
-  <div class="wrap-narrow stack-lg rv">
-    <div class="stack">
-      <p class="eyebrow" data-e="18">Qué es</p>
-      <h2 data-e="19">Tenés todo. Lo que falta es el hilo que lo une.</h2>
-    </div>
-    <div class="stack col">
-      <p data-e="20">Casi siempre el problema no es que falten ideas, sino que hay demasiadas y sueltas. Una clase que diste una vez, un taller que quedó a medio armar, algo que te gustaría ofrecer pero no sabés cómo nombrar ni cuánto cobrar.</p>
-      <p data-e="21">Mi trabajo es ayudarte a <strong>mirar todo lo que ya existe, encontrar un hilo conductor, ordenarlo y convertirlo en una propuesta clara, auténtica y comunicable</strong>.</p>
-      <p data-e="22">Son encuentros personalizados en los que trabajamos sobre tu proyecto particular: dónde estás hoy, qué herramientas ya tenés, qué querés desarrollar y cuáles pueden ser los próximos pasos.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec band-arena" data-b="4">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:42ch">
-      <p class="eyebrow" data-e="23">Para quién es</p>
-      <h2 data-e="24">Para quien tiene un proyecto y necesita otra mirada.</h2>
-    </div>
-    <div class="cards cards-3">
-      <div class="card">
-        <h3 data-e="25">Profes de Yoga</h3>
-        <p class="muted" data-e="26">Que quieren armar su propia propuesta —clases, talleres, ciclos, formaciones— y no sólo dar horas en un estudio ajeno.</p>
-      </div>
-      <div class="card">
-        <h3 data-e="27">Terapeutas</h3>
-        <p class="muted" data-e="28">Que trabajan uno a uno y quieren ordenar su servicio, definir valores y encontrar cómo contarlo.</p>
-      </div>
-      <div class="card">
-        <h3 data-e="29">Proyectos de bienestar</h3>
-        <p class="muted" data-e="30">Personas que desarrollan propuestas vinculadas al bienestar y al universo holístico y necesitan darles forma.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="trabajamos" data-b="5">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:42ch">
-      <p class="eyebrow" data-e="31">Sobre qué trabajamos</p>
-      <h2 data-e="32">De la idea suelta a un plan de acción posible.</h2>
-      <p class="muted" data-e="33">Cada mentoría se arma según lo que necesites. Estos son los frentes más frecuentes.</p>
-    </div>
-    <div class="cards cards-3">
-      <div class="card">
-        <h3 data-e="34">Tu propuesta</h3>
-        <ul class="lista" style="font-size:var(--fs-small)" data-b="6">
-          <li data-e="35">Definición y organización de tu propuesta.</li>
-          <li data-e="36">Creación de nuevas clases, talleres, cursos o servicios.</li>
-          <li data-e="37">Valores y modalidades.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 data-e="38">Tu identidad</h3>
-        <ul class="lista" style="font-size:var(--fs-small)" data-b="7">
-          <li data-e="39">Identidad y diferencial de tu proyecto.</li>
-          <li data-e="40">Comunicación y redes sociales.</li>
-          <li data-e="41">Estrategias de difusión.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 data-e="42">Tu plan</h3>
-        <ul class="lista" style="font-size:var(--fs-small)" data-b="8">
-          <li data-e="43">Organización y planificación.</li>
-          <li data-e="44">Un plan de acción posible y concreto.</li>
-          <li data-e="45">Próximos pasos, con fechas.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec band-barro" id="como" data-b="9">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:40ch">
-      <p class="eyebrow" data-e="46">Cómo funciona</p>
-      <h2 data-e="47">Cada encuentro termina con algo para hacer.</h2>
-    </div>
-    <div class="cards cards-3">
-      <div class="card">
-        <span class="num" data-e="48">1</span>
-        <h3 data-e="49">Antes</h3>
-        <p style="opacity:.9" data-e="50">Me contás dónde estás hoy y qué te gustaría desarrollar. Llego al encuentro con el material leído.</p>
-      </div>
-      <div class="card">
-        <span class="num" data-e="51">2</span>
-        <h3 data-e="52">El encuentro</h3>
-        <p style="opacity:.9" data-e="53">Trabajamos online sobre tu proyecto: qué ya tenés, qué falta, qué se puede simplificar y por dónde conviene empezar.</p>
-      </div>
-      <div class="card">
-        <span class="num" data-e="54">3</span>
-        <h3 data-e="55">Después</h3>
-        <p style="opacity:.9" data-e="56">Te mando un resumen de lo trabajado y tareas concretas para seguir avanzando por tu cuenta.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="valores" data-b="10">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:40ch">
-      <p class="eyebrow" data-e="57">Valores</p>
-      <h2 data-e="58">Un encuentro suelto o un proceso acompañado.</h2>
-    </div>
-    <div class="precios">
-      <div class="precio precio-destacado">
-        <div class="stack" style="gap:.4rem">
-          <p class="eyebrow" data-e="59">Proceso completo</p>
-          <h3 style="font-size:1.6rem" data-e="60">4 encuentros</h3>
-        </div>
-        <div class="sello"><span data-e="61">Proceso de</span><b data-e="62">4 encuentros</b><span data-e="63">online</span></div>
-        <p class="plata" data-e="64">$160.000<small>Proceso completo</small></p>
-        <ul class="lista" style="font-size:var(--fs-small)" data-b="11">
-          <li data-e="65">Cuatro encuentros individuales online.</li>
-          <li data-e="66">Resumen y tareas después de cada uno.</li>
-          <li data-e="67">Días y horarios se coordinan en cada caso.</li>
-        </ul>
-        <a class="btn btn-coral" style="align-self:flex-start;margin-top:auto" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20del%20proceso%20de%204%20mentor%C3%ADas" data-e="68">Quiero el proceso</a>
-      </div>
-      <div class="precio">
-        <div class="stack" style="gap:.4rem">
-          <p class="eyebrow" data-e="69">Para empezar</p>
-          <h3 style="font-size:1.6rem" data-e="70">1 encuentro</h3>
-        </div>
-        <p class="plata" data-e="71">$50.000<small>Encuentro individual online</small></p>
-        <p class="muted" style="font-size:var(--fs-small)" data-e="72">Un encuentro para desatar un nudo puntual: definir una propuesta, ponerle precio a algo, decidir por dónde arrancar. Incluye el resumen y las tareas.</p>
-        <a class="btn btn-line" style="align-self:flex-start;margin-top:auto" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20reservar%20una%20mentor%C3%ADa" data-e="73">Reservar un encuentro</a>
-      </div>
-    </div>
-    <p class="dato muted" data-e="74">Las mentorías son online. Escribime contándome en qué estás y coordinamos día y horario.</p>
-  </div>
-</section>
-
-<section class="sec band-arena" data-b="12">
-  <div class="wrap bio rv">
-    <img src="assets/hero-caminando.webp" alt="Piku Montiel acompañando a un grupo" width="1800" height="1200" loading="lazy" data-e="75">
-    <div class="stack">
-      <p class="eyebrow" data-e="76">Quién acompaña</p>
-      <h2 data-e="77">Piku Montiel</h2>
-      <p class="lead" data-e="78">Hace más de diez años acompaño a alumnas, alumnos y profes de Yoga a profundizar su práctica y a encontrar su propia manera de dar clase.</p>
-      <p data-e="79">Todas las propuestas de Piku Yoga parten de una mirada integral del Yoga, entendiendo la práctica como un camino que atraviesa cuerpo, mente y espíritu.</p>
-      <p>Dirijo la formación anual Yoga Esencial, sostengo un grupo de estudio permanente, doy clases semanales de Hatha Yoga, acompaño proyectos en mentorías individuales y llevo prácticas de Yoga a retiros y experiencias.</p>
-      <div class="btns" style="margin-top:.5rem">
-        <a class="btn btn-line" href="yogaesencial/">Ver la formación Yoga Esencial</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============ TESTIMONIOS ============ -->
-<section class="sec band-arena" id="testimonios">
-  <div class="wrap stack-lg rv">
-    <div class="stack" style="max-width:40ch">
-      <p class="eyebrow">Testimonios</p>
-      <h2>Lo que dicen quienes estudiaron con Piku.</h2>
-    </div>
-    <div class="testis">
-      <div class="testi">
-        <p>Expansiva, nutritiva, con deseos de seguir profundizando y veo una profe auténtica, humana, y muy generosa de sus saberes.</p>
-        <span class="aut">Guadalupe G.</span>
-      </div>
-      <div class="testi">
-        <p>Después de 4 años de recibirme, me dio impulso para comenzar a dar clases. Hoy tengo dos grupas: uno de seis mujeres adultas; otro más numeroso de personas ciegas.</p>
-        <span class="aut">Vanesa E.</span>
-      </div>
-      <div class="testi">
-        <p>Haber conocido a una profesora de yoga empática, con mucha sabiduría y que sabe cómo transmitir todo su conocimiento de forma clara y precisa.</p>
-        <span class="aut">Cecilia F.</span>
-      </div>
-      <div class="testi">
-        <p>Se sintió como ir a la casa de una amiga a tomar mate para hablar de cosas de la vida misma.</p>
-        <span class="aut">Gisele G.</span>
-      </div>
-      <div class="testi">
-        <p>La calidad y calidez de los maestros traspasa las distancias y las pantallas.</p>
-        <span class="aut">María Laura Z.</span>
-      </div>
-      <div class="testi">
-        <p>Ahora puedo confiar en mí para dar las clases de yoga con dirección.</p>
-        <span class="aut">Lara T.</span>
-      </div>
-      <div class="testi">
-        <p>Los miedos que tenía antes de este curso desaparecieron. Me siento segura de mí misma.</p>
-        <span class="aut">Analía V.</span>
-      </div>
-      <div class="testi">
-        <p>La vocación con la que enseñás se siente a través de la pantalla.</p>
-        <span class="aut">Alejandra O.</span>
-      </div>
-      <div class="testi">
-        <p>Un recorrido transformador, lleno de aprendizajes que me llevo tanto a la práctica como a mi vida.</p>
-        <span class="aut">Ticiana C.</span>
-      </div>
-    </div>
-    <p class="muted" style="font-size:var(--fs-small)">Devoluciones de alumnas y alumnos de las formaciones de Piku Yoga.</p>
-  </div>
-</section>
-
-<section class="sec band-coral" data-b="13">
-  <div class="wrap-narrow stack rv" style="align-items:flex-start">
-    <p class="eyebrow" data-e="81">Empecemos</p>
-    <p class="cita" data-e="82">Contame en qué estás y vemos juntas cuál es el próximo paso.</p>
-    <div class="btns" style="margin-top:1rem">
-      <a class="btn btn-amarillo" href="https://wa.me/5491154641985?text=Hola%20Piku!%20Quiero%20info%20de%20las%20mentor%C3%ADas" data-e="83">Escribime por WhatsApp</a>
-      <a class="btn btn-line" href="https://www.instagram.com/piku.yoga/" data-e="84">Ver el Instagram</a>
-    </div>
-  </div>
-</section>
-
-<footer class="foot" data-b="14">
-  <div class="foot-in">
-    <div class="stack" style="gap:.9rem;max-width:30ch">
-      <a class="nav-logo" href="index.html"><img src="assets/logo.webp" alt="Piku Yoga" width="52" height="52" data-e="85"></a>
-      <p style="font-size:var(--fs-small);color:#C8BAB2" data-e="86">Práctica · Formación · Profundización · Creatividad · Comunidad</p>
-    </div>
-    <div class="nav-links">
-      <a href="yogaesencial/">Yoga Esencial · Formación anual</a>
-      <a href="mentorias.html" data-e="90">Mentorías creativas</a>
-      <a href="grupo-de-estudio.html" data-e="88">Grupo de estudio</a>
-      <a href="retiros.html" data-e="91">Retiros y experiencias</a>
-      <a href="clases-de-hatha-yoga.html" data-e="89">Clases de Hatha Yoga</a>
-    </div>
-    <div class="nav-links">
-      <a href="https://wa.me/5491154641985" data-e="92">WhatsApp +54 9 11 5464-1985</a>
-      <a href="https://www.instagram.com/piku.yoga/" data-e="93">Instagram @piku.yoga</a>
-    </div>
-  </div>
-  <div class="wrap foot-legal">© Piku Yoga · Piku Montiel</div>
-</footer>
-
+</head>
+<body>
+<header class="top" id="top"><div class="wrap"><a class="logo" href="./" aria-label="Piku Yoga, inicio"><img src="assets/logo.webp" alt="Piku Yoga" width="66" height="66"></a>
+<nav class="nav"><a href="./#propuestas">Propuestas</a><a href="./#piku">Quién soy</a><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">Contacto</a></nav>
+<button class="burger" aria-label="Abrir el menú" aria-expanded="false"><svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 2h24M1 10h24M1 18h24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
+<nav class="menu"><a href="./#propuestas">Propuestas</a><a href="./#piku">Quién soy</a><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">Contacto</a></nav></header>
+<main>
+<section class="hero bleed centro"><div class="wrap">
+<div class="txt"><span class="eti">Acompañamiento individual</span>
+<h1 class="tit"><svg class="orn" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#F7C51E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#1D5E6E"/></svg>Mentorías <br>creativas<svg class="orn" viewBox="0 0 40 40" aria-hidden="true" style="transform:scaleX(-1)"><path d="M2 8c9-1 16 3 19 11-9 1-16-3-19-11z" fill="#1D5E6E"/><path d="M2 32c9 1 16-3 19-11-9-1-16 3-19 11z" fill="#F7C51E"/><path d="M14 20c6-6 14-8 24-7-5 7-13 9-24 7z" fill="#F7C51E"/></svg></h1><svg class="subr" viewBox="0 0 330 14" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9C60 4 140 3 210 4s96 2 116 3" stroke="#A98BC4" stroke-width="8" stroke-linecap="round" fill="none"/><path d="M14 11c70-3 170-4 300-2" stroke="#A98BC4" stroke-width="3" stroke-linecap="round" fill="none" opacity=".55"/></svg>
+<p class="bajada">Un espacio individual para ordenar tus ideas y transformar lo que imaginás en una propuesta concreta.</p>
+<a class="btn" href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20info%20de%20las%20mentor%C3%ADas" target="_blank" rel="noopener">Quiero una mentoría <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></a></div>
+<div class="foto"><img src="assets/pared-luz.webp" alt="Piku Montiel en la shala" style="object-position:50% 30%" loading="eager"></div>
+</div></section>
+<section class="banda"><div class="wrap"><p class="it" style="margin:0">Online · uno a uno</p><div class="loto"><svg viewBox="0 0 48 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M24 4c5 5 6 13 0 22-6-9-5-17 0-22z"/><path d="M24 26c-3-7-9-11-15-11 0 7 6 11 15 11z"/><path d="M24 26c3-7 9-11 15-11 0 7-6 11-15 11z"/><path d="M24 27c-6 1-14 0-20-5 4-1 9 0 13 2"/><path d="M24 27c6 1 14 0 20-5-4-1-9 0-13 2"/></svg></div><p class="it" style="margin:0">Días y horarios a convenir</p><span class="sep" aria-hidden="true"></span><p class="it" style="margin:0">Desde $50.000</p></div></section>
+<section class="sec"><div class="wrap lado angosto">
+<div class="foto"><img src="assets/mudra-manos.webp" alt="Piku Montiel explicando con las manos" style="object-position:50% 45%" loading="lazy"></div>
+<div><h2 class="h2">De la idea a un plan posible.</h2>
+<div class="cols3"><div><h3>Tu propuesta</h3><p>Clarificamos tu idea y el sentido que la mueve.</p></div><div><h3>Tu identidad</h3><p>Reconocemos tu mirada y lo que la hace única.</p></div><div><h3>Tu plan</h3><p>Ordenamos pasos reales para que puedas llevarla a la acción.</p></div></div>
+<div class="pills"><span class="pastilla">1 encuentro · $50.000</span><span class="pastilla">Proceso de 4 encuentros · $160.000</span></div>
+<p class="linea-txt lila">Resumen y tareas después de cada encuentro.</p></div>
+</div></section>
+<section class="cta"><div class="wrap"><h2>Contame tu idea.</h2><p>Para profes de Yoga, terapeutas y proyectos de bienestar que quieren darle forma a una propuesta propia.</p>
+<div class="acc"><a class="btn" href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20info%20de%20las%20mentor%C3%ADas" target="_blank" rel="noopener">Quiero una mentoría <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12 12 4M6 4h6v6"/></svg></a><a class="btn claro" href="https://www.instagram.com/piku.yoga/" target="_blank" rel="noopener">Ver el Instagram</a></div></div></section>
+</main>
+<footer class="pie"><div class="wrap">
+<div><a href="./"><img src="assets/logo.webp" alt="Piku Yoga" width="52" height="52"></a><p class="lema">Práctica · Formación · Profundización · Creatividad · Comunidad</p></div>
+<div><h4>Propuestas</h4><ul><li><a href="yogaesencial/">Yoga Esencial · Formación anual</a></li><li><a href="clases-de-hatha-yoga.html">Clases de Hatha Yoga</a></li><li><a href="mentorias.html">Mentorías creativas</a></li><li><a href="grupo-de-estudio.html">Grupo de estudio</a></li><li><a href="retiros.html">Retiros y experiencias</a></li></ul></div>
+<div><h4>Contacto</h4><ul><li><a href="https://wa.me/5491154641985?text=Hola%20Piku%21%20Quiero%20hacerte%20una%20consulta" target="_blank" rel="noopener">WhatsApp +54 9 11 5464-1985</a></li><li><a href="https://www.instagram.com/piku.yoga/" target="_blank" rel="noopener">Instagram @piku.yoga</a></li></ul></div>
+<p class="fin">© Piku Yoga · Piku Montiel · pikuyoga.com</p></div></footer>
 <script>
-(function(){
-  var els=document.querySelectorAll('.rv');
-  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(e){e.classList.add('in')});return;
-  }
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){ if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);} });
-  },{rootMargin:'0px 0px -8% 0px',threshold:.05});
-  els.forEach(function(e){io.observe(e)});
-})();
+(function(){var t=document.getElementById('top'),b=t.querySelector('.burger');b.addEventListener('click',function(){var a=t.classList.toggle('abierto');b.setAttribute('aria-expanded',a);});t.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('abierto');});});})();
 </script>
-<script src="https://semillaredes.com/assets/idioma.js" defer></script>
 <script src="https://vm.semillaredes.com/web/editor.js" defer></script>
 </body>
 </html>

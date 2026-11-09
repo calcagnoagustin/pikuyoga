@@ -17,15 +17,12 @@ Se publica con GitHub Pages sobre el dominio `pikuyoga.com` (registrado en Hosti
 El orden de la tabla es el orden de importancia de las propuestas.
 Todo el CSS y el JS van embebidos en cada `.html`.
 
-## Dos lenguajes visuales
+## Lenguaje visual
 
-El sitio está en migración.
-
-- **Nuevo** (home y Yoga Esencial): fondo crema, amarillo, Nunito + Karla + IBM Plex Mono,
-  bordes redondeados, adornos dibujados.
-- **Viejo** (las otras cuatro): fondo tinta, Fraunces + Karla + Montserrat, coral y barro.
-
-Falta pasar las cuatro páginas viejas al sistema nuevo.
+Desde el 09/11/2026 las seis páginas comparten el mismo sistema (diseños aprobados por Agus):
+fondo crema `#FBF1E8`, tinta azul `#13304A`, botones verde azulado `#1D5E6E`, lila `#A98BC4`
+(subrayado de pincel, barras de título, tarjeta destacada) y celeste `#DDE8EE` (bandas y pastillas).
+Tipografía Nunito. Adornos de hojas a los lados de los títulos y loto en las bandas.
 
 ## Baja del Posgrado en Yoga
 
@@ -51,7 +48,6 @@ Cuatro registros A de GitHub (185.199.108–111.153), cuatro AAAA
 
 ## Pendiente
 
-1. Pasar las cuatro landings viejas al lenguaje visual nuevo.
 2. Medio de pago: hoy todos los botones van a WhatsApp con mensaje precargado.
 3. Imagen OG por página (1200×630) para cuando se comparte el link.
 4. Píxel de Meta / Google Analytics.
