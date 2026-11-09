@@ -13,7 +13,10 @@ Se publica con GitHub Pages sobre el dominio `pikuyoga.com` (registrado en Hosti
 | `grupo-de-estudio.html` | pikuyoga.com/grupo-de-estudio.html | Grupo de estudio y prácticas docentes |
 | `clases-de-hatha-yoga.html` | pikuyoga.com/clases-de-hatha-yoga.html | Clases de Hatha Yoga online |
 | `retiros.html` | pikuyoga.com/retiros.html | Retiros y experiencias |
-| `assets/` | | Fotos (webp) y logo |
+| `assets/` | | Fotos (webp), logo e imágenes de compartir (`og-*.jpg`) |
+| `robots.txt` | pikuyoga.com/robots.txt | Permisos de rastreo, incluidos los bots de IA |
+| `sitemap.xml` | pikuyoga.com/sitemap.xml | Mapa del sitio para los buscadores |
+| `llms.txt` | pikuyoga.com/llms.txt | Resumen del sitio en texto plano para buscadores con IA |
 | `i18n/` | | Traducciones (no las carga ninguna página todavía) |
 
 El orden de la tabla es el orden de importancia de las propuestas.
@@ -56,10 +59,14 @@ página propia). Lo pagado por un curso suelto se descuenta de la primera cuota 
 | Grupo de estudio | $62.000 por mes |
 | Clases de Hatha Yoga | $48.000 por mes |
 | Mentoría suelta / proceso de 4 | $65.000 / $220.000 |
-| Retiros (B2B) | USD 150 y USD 200 |
+| Retiros (B2B) | A convenir · presupuesto por retiro |
 
 Las cuotas son fijas. **Revisar la lista en julio**: con la inflación vigente, una lista
 de enero vale ~23% menos en diciembre.
+
+**Los precios no se muestran en el home.** Cada página de producto los muestra recién
+después del programa, y en la pregunta «¿cuánto sale?». Retiros no lleva precio en
+ninguna parte: se cotiza por retiro.
 
 ## Baja del Posgrado mensual
 
@@ -68,13 +75,32 @@ así que no quedó ninguna URL rota. Se quitaron todas las menciones de las otra
 páginas (nav, footer y bloques de "otras propuestas"), reemplazadas por Yoga Esencial.
 El contenido viejo está en el historial de git, en el commit anterior al de la baja.
 
+## SEO
+
+Las ocho páginas llevan:
+
+- `<title>` y `description` escritos por intención de búsqueda, `canonical`, `og:*` completo
+  (con imagen propia de 1200×630 en `assets/og-*.jpg`) y `twitter:card`.
+- **Datos estructurados JSON-LD** en un `@graph`: `Organization`, `Person` (Piku),
+  `WebSite`, `WebPage`, `BreadcrumbList`, `Course` + `CourseInstance` + `Offer`
+  (o `Service` en mentorías y retiros) y `FAQPage`.
+- Una sección visible de **preguntas frecuentes** al pie, con las mismas preguntas y
+  respuestas que el `FAQPage`. **Si se edita una, hay que editar las dos.**
+- Una línea «Actualizado el …» al cierre de las preguntas. Conviene refrescarla cuando
+  se tocan precios o fechas: la frescura cuenta para los buscadores con IA.
+
+No se marcan `AggregateRating` ni `Review`: los testimonios vienen de un formulario de
+devolución del curso, sin puntaje ni permiso de publicación, así que inventar estrellas
+sería falsear datos.
+
 ## Actualizar el sitio
 
 Editar el `.html`, commit, push. Pages redeploya solo en menos de un minuto.
 
-Precios y fechas están escritos directo en el HTML. Buscar:
-`$900.000`, `$130.000`, `$500.000`, `$1.170.000`, `$60.000` (Yoga Esencial),
-`$50.000` (mentorías), `$45.000` (grupo), `$30.000` (clases), `USD 150` / `USD 200` (retiros).
+Precios y fechas están escritos directo en el HTML, y además en el JSON-LD y en
+`llms.txt`. Al cambiar un precio hay que tocar los tres. Buscar: `$720.000`, `$390.000`,
+`$143.000`, `$395.000`, `$1.290.000` (Yoga Esencial), `$80.000` (Yoga Nidra),
+`$65.000` / `$220.000` (mentorías), `$62.000` (grupo), `$48.000` (clases).
 
 ## DNS
 
@@ -85,11 +111,17 @@ Cuatro registros A de GitHub (185.199.108–111.153), cuatro AAAA
 
 ## Pendiente
 
-2. Medio de pago: hoy todos los botones van a WhatsApp con mensaje precargado.
-3. Imagen OG por página (1200×630) para cuando se comparte el link.
-4. Píxel de Meta / Google Analytics.
-5. Testimonios de alumnas (falta el link al formulario).
+1. Medio de pago: hoy todos los botones van a WhatsApp con mensaje precargado.
+2. Píxel de Meta / Google Analytics: sin esto no se puede medir de dónde llega la gente.
+3. Google Business Profile y consistencia de nombre en la web: es lo que más mueve la
+   aguja para que los buscadores con IA reconozcan la marca como entidad.
+4. Google Search Console: dar de alta el dominio y subir el sitemap.
+5. Link en la bio de Instagram (hoy no hay ninguno).
 6. URLs sin `.html` para las cuatro viejas (una carpeta por página, como `yogaesencial/`).
 7. Definir qué pasa con `i18n/`: hay 30 JSON con traducciones a 5 idiomas y 455
-   atributos `data-e` en el HTML viejo, pero ninguna página los carga.
-   `index.*.json` quedó huérfano al reemplazarse el home.
+   atributos `data-e` en el HTML viejo, pero ninguna página los carga. Mientras tanto
+   `robots.txt` los deja fuera del rastreo.
+8. Confirmar la fecha exacta de arranque del instructorado: el JSON-LD dice
+   **2027-03-02** (primer martes de marzo) como supuesto.
+9. Qué dice el certificado del instructorado: hasta saberlo no se declara ninguna
+   credencial en los datos estructurados ni en el texto.
