@@ -6,11 +6,13 @@ Se publica con GitHub Pages sobre el dominio `pikuyoga.com` (registrado en Hosti
 | Archivo | URL final | Propuesta |
 |---|---|---|
 | `index.html` | pikuyoga.com | **Home** — índice de las propuestas |
-| `yogaesencial/index.html` | pikuyoga.com/yogaesencial | Yoga Esencial · formación anual 2027 |
+| `yogaesencial/index.html` | pikuyoga.com/yogaesencial | Instructorado en Yoga Esencial · 6 meses (mar–ago) |
+| `posgrado/index.html` | pikuyoga.com/posgrado | Posgrado en Yoga Esencial · 3 meses (sep–nov) |
+| `yoganidra/index.html` | pikuyoga.com/yoganidra | Curso de Yoga Nidra · 4 encuentros |
 | `mentorias.html` | pikuyoga.com/mentorias.html | Mentorías creativas |
 | `grupo-de-estudio.html` | pikuyoga.com/grupo-de-estudio.html | Grupo de estudio y prácticas docentes |
-| `retiros.html` | pikuyoga.com/retiros.html | Retiros y experiencias |
 | `clases-de-hatha-yoga.html` | pikuyoga.com/clases-de-hatha-yoga.html | Clases de Hatha Yoga online |
+| `retiros.html` | pikuyoga.com/retiros.html | Retiros y experiencias |
 | `assets/` | | Fotos (webp) y logo |
 | `i18n/` | | Traducciones (no las carga ninguna página todavía) |
 
@@ -24,7 +26,42 @@ fondo crema `#FBF1E8`, tinta azul `#13304A`, botones verde azulado `#1D5E6E`, li
 (subrayado de pincel, barras de título, tarjeta destacada) y celeste `#DDE8EE` (bandas y pastillas).
 Tipografía Nunito. Adornos de hojas a los lados de los títulos y loto en las bandas.
 
-## Baja del Posgrado en Yoga
+## Estructura de Yoga Esencial (desde 11/2026)
+
+Dos etapas que se venden juntas o por separado:
+
+- **Instructorado** — 6 meses, marzo a agosto. Historia y filosofía, chakras, asanas,
+  pranayamas, meditación, pedagogía. Sin formación previa.
+- **Posgrado** — 3 meses, septiembre a noviembre. Yoga Nidra, Yoga con elementos, Yoga en silla.
+
+El **encuentro presencial en Buenos Aires** (al cerrar el instructorado) y el **retiro en
+Villa de Merlo, San Luis** (diciembre) son **optativos**, se pagan aparte y tienen fecha y
+valor a definir. El retiro vale para las dos etapas. Si el encuentro no es posible, se
+coordina supervisión personalizada online.
+
+Los módulos del Posgrado se venden también como cursos sueltos (el de Yoga Nidra ya tiene
+página propia). Lo pagado por un curso suelto se descuenta de la primera cuota del Posgrado.
+
+## Precios (lista enero 2027)
+
+| | Valor |
+|---|---|
+| Instructorado · 6 cuotas | $143.000 + matrícula $85.000 = $943.000 |
+| Instructorado · 2 pagos | $390.000 ×2 + matrícula = $865.000 |
+| Instructorado · 1 pago | $720.000 + matrícula = $805.000 |
+| Posgrado · 3 cuotas | $143.000 + matrícula $45.000 = $474.000 |
+| Posgrado · 1 pago | $395.000 + matrícula = $440.000 |
+| Camino completo (los dos juntos) | $1.290.000 |
+| Curso suelto (Yoga Nidra) | $80.000 |
+| Grupo de estudio | $62.000 por mes |
+| Clases de Hatha Yoga | $48.000 por mes |
+| Mentoría suelta / proceso de 4 | $65.000 / $220.000 |
+| Retiros (B2B) | USD 150 y USD 200 |
+
+Las cuotas son fijas. **Revisar la lista en julio**: con la inflación vigente, una lista
+de enero vale ~23% menos en diciembre.
+
+## Baja del Posgrado mensual
 
 El Posgrado en Yoga se discontinuó en noviembre de 2026. Ocupaba el `index.html`,
 así que no quedó ninguna URL rota. Se quitaron todas las menciones de las otras
