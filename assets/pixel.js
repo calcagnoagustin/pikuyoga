@@ -23,7 +23,7 @@
     if (/wa\.me|api\.whatsapp\.com|web\.whatsapp\.com/.test(h)) {
       fbq('track', 'Contact', datos({ content_name: pr, content_ids: [id] }));
       fbq('trackCustom', 'ConsultaWhatsApp', { producto: pr, producto_id: id });
-    } else if (/mercadopago\.com|mpago\.la/.test(h)) {
+    } else if (/mercadopago\.com|mpago\.la|mpago\.li/.test(h)) {
       fbq('track', 'InitiateCheckout', datos({ content_name: pr, content_ids: [id] }));
     }
   }, true);
