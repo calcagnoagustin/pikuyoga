@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<script src="/assets/pixel.js" data-producto="Instructorado Yoga Esencial 2027" data-id="yogaesencial" data-valor="680000"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inscripción · Instructorado Yoga Esencial 2027 | Piku Yoga</title>
 <meta name="description" content="Inscribite al Instructorado en Yoga Esencial 2027 con Piku Montiel: transferencia o cuotas con Mercado Pago.">
@@ -350,10 +351,6 @@ a{color:inherit}
 .volver{display:inline-block;margin-top:18px;color:var(--teal);font-weight:700;text-decoration:none;font-size:15px}
 @media (min-width:760px){.ins h1{font-size:44px}.op{padding:16px 20px}.op .m{font-size:24px;margin-top:-2px}}
 </style>
-<script>/* Píxel de Meta · PIXEL PIKU YOGA */
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','425937122766057');fbq('track','PageView');
-</script><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=425937122766057&ev=PageView&noscript=1" alt=""></noscript>
 </head>
 <body>
 <header class="top" id="top"><div class="wrap"><a class="logo" href="../../" aria-label="Piku Yoga, inicio"><img src="../../assets/logo.webp" alt="Piku Yoga" width="66" height="66"></a>
@@ -377,7 +374,7 @@ fbq('init','425937122766057');fbq('track','PageView');
 <div class="paso" id="pPago"><h2>2 · Pagá</h2>
   <div class="caja2" id="cT">
     <div class="dato"><div><span>Alias</span><b id="dAlias"></b></div><button class="cp" data-cp="dAlias">Copiar</button></div>
-    <div class="dato"><div><span>CBU / CVU</span><b id="dCbu"></b></div><button class="cp" data-cp="dCbu">Copiar</button></div>
+    <div class="dato"><div><span>CVU</span><b id="dCbu"></b></div><button class="cp" data-cp="dCbu">Copiar</button></div>
     <div class="dato"><div><span>Titular</span><b id="dTit"></b></div></div>
     <div class="dato"><div><span>Monto</span><b id="dMonto"></b></div></div>
   </div>
@@ -413,7 +410,7 @@ const TRAMOS=[
   {desde:'2027-01-01', nombre:'enero y febrero', hasta:'28 de febrero', t:760000, c3:280000, c6:160500, t3:840000, t6:963000, mp3:'', mp6:''},
   {desde:'2027-03-01', nombre:'desde marzo', hasta:'', t:840000, c3:302000, c6:173300, t3:906000, t6:1039800, mp3:'', mp6:''}
 ];
-const TRANSF={alias:'', cbu:'', titular:''};
+const TRANSF={alias:'piku.montiel', cbu:'0000003100063942687838', titular:'Agustina Montiel'};
 const WA='5491154641985';
 /* =================================================================================================== */
 const $=id=>document.getElementById(id), fm=n=>'$'+Math.round(n).toLocaleString('es-AR');
@@ -435,9 +432,9 @@ function pintar(){
 }
 document.querySelectorAll('.op').forEach(b=>b.onclick=()=>{ M=b.dataset.m; pintar(); });
 document.querySelectorAll('[data-cp]').forEach(b=>b.onclick=()=>{ const v=$(b.dataset.cp).textContent; if(v===pend) return; navigator.clipboard&&navigator.clipboard.writeText(v); b.textContent='Copiado'; setTimeout(()=>b.textContent='Copiar',1500); });
-$('mpLink').addEventListener('click',()=>{ try{ fbq('track','InitiateCheckout',{value:monto(M),currency:'ARS',content_name:'Instructorado Yoga Esencial 2027'}); }catch(e){} });
+$('mpLink').addEventListener('click',()=>{ try{ fbq('track','InitiateCheckout',{value:monto(M),currency:'ARS',content_name:'Instructorado Yoga Esencial 2027',content_ids:['yogaesencial'],content_type:'product'}); }catch(e){} });
 pintar();
-try{ fbq('track','InitiateCheckout',{value:T.t,currency:'ARS',content_name:'Instructorado Yoga Esencial 2027'}); }catch(e){}
+try{ fbq('track','InitiateCheckout',{value:T.t,currency:'ARS',content_name:'Instructorado Yoga Esencial 2027',content_ids:['yogaesencial'],content_type:'product'}); }catch(e){}
 const SB='https://fdrxsjphlvvwwknnrjtx.supabase.co/rest/v1/rpc/piku_inscripcion_crear', K='sb_publishable_kT7McM9Dt7xP44IlFotsLA_8-b8q_17';
 $('f').addEventListener('submit',async e=>{
   e.preventDefault(); const d=Object.fromEntries(new FormData($('f'))); $('err').textContent='';
@@ -445,7 +442,7 @@ $('f').addEventListener('submit',async e=>{
   const b=$('enviar'); b.disabled=true; b.textContent='Enviando…';
   let r=null; try{ r=await fetch(SB,{method:'POST',headers:{apikey:K,'Content-Type':'application/json'},body:JSON.stringify({p_nombre:d.nombre,p_email:d.email,p_whatsapp:d.whatsapp,p_metodo:M,p_tramo:T.nombre,p_monto:monto(M),p_origen:location.search.slice(0,300)||null})}).then(x=>x.json()); }catch(err){}
   if(r&&r.ok){
-    try{ fbq('track','Lead',{value:monto(M),currency:'ARS'}); fbq('track','Purchase',{value:monto(M),currency:'ARS',content_name:'Instructorado Yoga Esencial 2027'}); }catch(e){}
+    try{ fbq('track','Lead',{value:monto(M),currency:'ARS',content_name:'Instructorado Yoga Esencial 2027',content_ids:['yogaesencial']}); fbq('track','Purchase',{value:monto(M),currency:'ARS',content_name:'Instructorado Yoga Esencial 2027',content_ids:['yogaesencial'],content_type:'product'}); }catch(e){}
     const met=M==='transferencia'?'por transferencia':M==='mp3'?'en 3 cuotas con Mercado Pago':'en 6 cuotas con Mercado Pago';
     const txt='Hola Piku! Soy '+d.nombre.trim()+'. Me inscribí al Instructorado Yoga Esencial 2027 y pagué '+met+'. Te mando el comprobante.';
     $('okWa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(txt);
